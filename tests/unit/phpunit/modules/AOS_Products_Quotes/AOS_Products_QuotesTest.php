@@ -1,6 +1,6 @@
 <?php
 
-class AOS_Products_QuotesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_Products_QuotesTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -14,7 +14,7 @@ class AOS_Products_QuotesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstra
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aos_products_quotes');
         $state->pushTable('tracker');
 
@@ -42,7 +42,7 @@ class AOS_Products_QuotesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstra
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aos_products_quotes');
         $state->pushTable('tracker');
         $state->pushGlobals();

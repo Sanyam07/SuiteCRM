@@ -1,6 +1,6 @@
 <?php
 
-class AOS_ProductsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_ProductsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -29,7 +29,7 @@ class AOS_ProductsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aos_products');
         $state->pushTable('aod_index');
         $state->pushTable('tracker');

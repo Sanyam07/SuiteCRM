@@ -1,7 +1,7 @@
 <?php
 
 
-class SugarAutoLoaderTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class SugarAutoLoaderTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testautoload()
     {
@@ -22,7 +22,7 @@ class SugarAutoLoaderTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testloadAll()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

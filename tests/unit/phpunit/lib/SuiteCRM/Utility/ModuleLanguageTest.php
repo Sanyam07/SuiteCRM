@@ -1,7 +1,7 @@
 <?php
 
 
-class ModuleLanguageTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ModuleLanguageTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     /**
      * @var \UnitTester
@@ -9,7 +9,7 @@ class ModuleLanguageTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     protected $tester;
 
     /**
-     * @var \SuiteCRM\Utility\ModuleLanguage $paths
+     * @var \ICTCRM\Utility\ModuleLanguage $paths
      */
     private static $language;
 
@@ -18,13 +18,13 @@ class ModuleLanguageTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         parent::setUp();
         if (self::$language === null) {
-            self::$language = new \SuiteCRM\Utility\ModuleLanguage();
+            self::$language = new \ICTCRM\Utility\ModuleLanguage();
         }
     }
 
     public function testGetCurrentLanguage()
     {
-        $language = self::$language->getModuleLanguageStrings(new \SuiteCRM\Utility\CurrentLanguage(), 'Accounts');
+        $language = self::$language->getModuleLanguageStrings(new \ICTCRM\Utility\CurrentLanguage(), 'Accounts');
         $this->assertNotEmpty($language);
         $this->assertArrayHasKey('LBL_MODULE_NAME', $language);
     }

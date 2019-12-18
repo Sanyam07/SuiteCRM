@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,9 +33,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 if (!defined('sugarEntry') || !sugarEntry) {
@@ -1128,7 +1128,7 @@ function checkSystemCompliance()
 
     if (check_php_version() === 0) {
         $ret['phpVersion'] = "<b><span class=stop>{$installer_mod_strings['LBL_CURRENT_PHP_VERSION']} ".constant('PHP_VERSION').". ";
-        $ret['phpVersion'] .= $mod_strings['LBL_RECOMMENDED_PHP_VERSION_1'].constant('SUITECRM_PHP_REC_VERSION').$mod_strings['LBL_RECOMMENDED_PHP_VERSION_2'].'</span></b>';
+        $ret['phpVersion'] .= $mod_strings['LBL_RECOMMENDED_PHP_VERSION_1'].constant('ICTCRM_PHP_REC_VERSION').$mod_strings['LBL_RECOMMENDED_PHP_VERSION_2'].'</span></b>';
         $ret['warn_found'] = true;
     }
 
@@ -2136,7 +2136,7 @@ if (!function_exists('validate_manifest')) {
         global $sugar_flavor;
         global $mod_strings;
 
-        include('suitecrm_version.php');
+        include('ictcrm_version.php');
 
         if (!isset($manifest['type'])) {
             return $mod_strings['ERROR_MANIFEST_TYPE'];
@@ -2175,8 +2175,8 @@ if (!function_exists('validate_manifest')) {
         }
 
 
-        if (!isset($manifest['acceptable_suitecrm_versions'])) {
-            // If sugarcrm version set 'acceptable_sugar_versions', and acceptable_suitecrm_versions not set check on sugar version.
+        if (!isset($manifest['acceptable_ictcrm_versions'])) {
+            // If sugarcrm version set 'acceptable_sugar_versions', and acceptable_ictcrm_versions not set check on sugar version.
             if (isset($manifest['acceptable_sugar_versions'])) {
                 $version_ok = false;
                 $matches_empty = true;
@@ -2206,30 +2206,30 @@ if (!function_exists('validate_manifest')) {
                 return $mod_strings['ERROR_NO_VERSION_SET'];
             }
         } else {
-            // If sugarcrm version set 'acceptable_sugar_versions', and acceptable_suitecrm_versions set check only on suitecrm version
-            // If sugarcrm version not set 'acceptable_sugar_versions', and acceptable_suitecrm_versions set check only on suitecrm version
+            // If sugarcrm version set 'acceptable_sugar_versions', and acceptable_ictcrm_versions set check only on ictcrm version
+            // If sugarcrm version not set 'acceptable_sugar_versions', and acceptable_ictcrm_versions set check only on ictcrm version
             $version_ok = false;
             $matches_empty = true;
-            if (isset($manifest['acceptable_suitecrm_versions']['exact_matches'])) {
+            if (isset($manifest['acceptable_ictcrm_versions']['exact_matches'])) {
                 $matches_empty = false;
-                foreach ($manifest['acceptable_suitecrm_versions']['exact_matches'] as $match) {
-                    if ($match == $suitecrm_version) {
+                foreach ($manifest['acceptable_ictcrm_versions']['exact_matches'] as $match) {
+                    if ($match == $ictcrm_version) {
                         $version_ok = true;
                     }
                 }
             }
-            if (!$version_ok && isset($manifest['acceptable_suitecrm_versions']['regex_matches'])) {
+            if (!$version_ok && isset($manifest['acceptable_ictcrm_versions']['regex_matches'])) {
                 $matches_empty = false;
-                foreach ($manifest['acceptable_suitecrm_versions']['regex_matches'] as $match) {
-                    if (preg_match("/$match/", $suitecrm_version)) {
+                foreach ($manifest['acceptable_ictcrm_versions']['regex_matches'] as $match) {
+                    if (preg_match("/$match/", $ictcrm_version)) {
                         $version_ok = true;
                     }
                 }
             }
 
             if (!$matches_empty && !$version_ok) {
-                return $mod_strings['ERROR_SUITECRM_VERSION_INCOMPATIBLE'] . "<br />" .
-                $mod_strings['ERR_UW_SUITECRM_VERSION'] . $suitecrm_version;
+                return $mod_strings['ERROR_ICTCRM_VERSION_INCOMPATIBLE'] . "<br />" .
+                $mod_strings['ERR_UW_ICTCRM_VERSION'] . $ictcrm_version;
             }
         }
 
@@ -3840,7 +3840,7 @@ function update_iframe_dashlets()
         if (!empty($content['dashlets']) && !empty($content['pages'])) {
             $originalDashlets = $content['dashlets'];
             foreach ($originalDashlets as $key => $ds) {
-                if (!empty($ds['options']['url']) && stristr($ds['options']['url'], 'https://suitecrm.com/')) {
+                if (!empty($ds['options']['url']) && stristr($ds['options']['url'], 'https://ictcrm.com/')) {
                     unset($originalDashlets[$key]);
                 }
             }

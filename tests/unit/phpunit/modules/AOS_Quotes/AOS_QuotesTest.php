@@ -1,6 +1,6 @@
 <?php
 
-class AOS_QuotesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_QuotesTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -30,7 +30,7 @@ class AOS_QuotesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testSaveAndMark_deleted()
     {
-        $state = new SuiteCRM\StateSaver();        
+        $state = new ICTCRM\StateSaver();          
         $state->pushTable('aos_quotes');
 
         $aosQuotes = new AOS_Quotes();

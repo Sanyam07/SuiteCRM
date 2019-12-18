@@ -1,6 +1,6 @@
 <?php
 
-class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class DocumentRevisionTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -26,7 +26,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testSaveAndRetrieve()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
@@ -75,7 +75,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_summary_text()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
@@ -100,7 +100,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testis_authenticated()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
@@ -125,7 +125,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_list_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
@@ -151,7 +151,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_detail_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
@@ -175,7 +175,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testgetDocumentRevisionNameForDisplay()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
         $state->pushTable('document_revisions');
@@ -200,7 +200,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_document_name_revision()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
@@ -224,7 +224,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testlist_view_parse_additional_sections()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
@@ -251,7 +251,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_list_view_data()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
         $state->pushTable('document_revisions');
@@ -269,7 +269,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_document_revision_name()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
         $state->pushTable('document_revisions');
@@ -286,7 +286,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_document_revisions()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
         $state->pushTable('document_revisions');
@@ -303,7 +303,7 @@ class DocumentRevisionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbean_implements()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('cron_remove_documents');
         $state->pushTable('document_revisions');

@@ -1,11 +1,11 @@
 <?php
 
-namespace SuiteCRM\Search;
+namespace ICTCRM\Search;
 
 use Mockery;
 use ReflectionClass;
 use ReflectionException;
-use SuiteCRM\StateCheckerPHPUnitTestCaseAbstract;
+use ICTCRM\StateCheckerPHPUnitTestCaseAbstract;
 
 abstract class SearchTestAbstract extends StateCheckerPHPUnitTestCaseAbstract
 {

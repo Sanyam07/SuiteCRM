@@ -25,7 +25,7 @@
  * @author SalesAgility Ltd <support@salesagility.com>
  */
 
-use SuiteCRM\Utility\SuiteValidator as SuiteValidator;
+use ICTCRM\Utility\SuiteValidator as SuiteValidator;
 
 class templateParser
 {

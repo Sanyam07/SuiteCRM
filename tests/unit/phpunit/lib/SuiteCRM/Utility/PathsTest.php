@@ -1,6 +1,6 @@
 <?php
 
-class PathsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class PathsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     /**
      * @var \UnitTester
@@ -8,7 +8,7 @@ class PathsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     protected $tester;
 
     /**
-     * @var \SuiteCRM\Utility\Paths $paths
+     * @var \ICTCRM\Utility\Paths $paths
      */
     private static $paths;
 
@@ -21,7 +21,7 @@ class PathsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         parent::setUp();
         if (self::$paths === null) {
-            self::$paths = new \SuiteCRM\Utility\Paths();
+            self::$paths = new \ICTCRM\Utility\Paths();
         }
 
         if (self::$projectPath === null) {

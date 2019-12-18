@@ -3,7 +3,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -32,9 +32,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 
@@ -4886,7 +4886,7 @@ SUGAR.append(SUGAR.util, {
                 ajaxStatus.showStatus(SUGAR.language.get('app_strings', 'LBL_SAVING'));
                 var args = "action=save&id=" + id + "&record=" + id + "&status=" + new_status + "&module=" + module;
 
-                //SuiteCRM bug #618
+                //ICTCRM bug #618
                 //The bug fix above (42361) has been taken out as the 'search_form' element it tries to find
                 //is never found in the dashlet.  This means that the entire page was always reloaded whenever
                 //a meeting or call was removed.  The callback below will only refresh the entire page if the

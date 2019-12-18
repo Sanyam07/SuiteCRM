@@ -1,10 +1,10 @@
 <?php
 
-namespace SuiteCRM\Exception;
+namespace ICTCRM\Exception;
 
 use Psr\Log\LogLevel;
 
-class ExceptionTest extends \SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ExceptionTest extends \ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     /**
      * @var \UnitTester
@@ -27,7 +27,7 @@ class ExceptionTest extends \SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testGetDetail()
     {
         $this->assertEquals(
-            'SuiteCRM has encountered an exception which has not been handled',
+            'ICTCRM has encountered an exception which has not been handled',
             self::$exception->getDetail()
         );
     }

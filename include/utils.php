@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,9 +33,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 if (!defined('sugarEntry') || !sugarEntry) {
@@ -2466,7 +2466,7 @@ function clear_register_value($category, $name)
 // this function cleans id's when being imported
 function convert_id($string)
 {
-    $stateSaver = new SuiteCRM\StateSaver();
+    $stateSaver = new ICTCRM\StateSaver();
     $stateSaver->pushErrorLevel();
 
     $function = function ($matches) {
@@ -3195,7 +3195,7 @@ function check_php_version($sys_php_version = '')
     }
 
     // versions below MIN_PHP_VERSION are not accepted, so return early.
-    if (version_compare($sys_php_version, constant('SUITECRM_PHP_MIN_VERSION'), '<') === true) {
+    if (version_compare($sys_php_version, constant('ICTCRM_PHP_MIN_VERSION'), '<') === true) {
         return - 1;
     }
 
@@ -3209,7 +3209,7 @@ function check_php_version($sys_php_version = '')
     }
 
     //If the checked version is between the minimum and recommended versions, return 0
-    if (version_compare($sys_php_version, constant('SUITECRM_PHP_REC_VERSION'), '<') === true) {
+    if (version_compare($sys_php_version, constant('ICTCRM_PHP_REC_VERSION'), '<') === true) {
         return 0;
     }
 
@@ -3564,7 +3564,7 @@ function StackTraceErrorHandler($errno, $errstr, $errfile, $errline, $errcontext
     $error_msg = '<b>[' . $type . ']</b> ' . $error_msg;
     echo $error_msg;
     $trace = display_stack_trace();
-    \SuiteCRM\ErrorMessage::log("Catch an error: $error_msg \nTrace info:\n" . $trace);
+    \ICTCRM\ErrorMessage::log("Catch an error: $error_msg \nTrace info:\n" . $trace);
     if ($halt_script) {
         exit(1);
     }
@@ -5573,7 +5573,7 @@ function isValidId($id)
     } else {
         trigger_error($deprecatedMessage, E_USER_DEPRECATED);
     }
-    $isValidator = new \SuiteCRM\Utility\SuiteValidator();
+    $isValidator = new \ICTCRM\Utility\SuiteValidator();
     $result = $isValidator->isValidId($id);
     return $result;
 }
@@ -5589,7 +5589,7 @@ function isValidEmailAddress($email, $message = 'Invalid email address given', $
     if ($logInvalid) {
         $trace = debug_backtrace();
         $where = "Called at {$trace[1]['file']}:{$trace[1]['line']} from function {$trace[1]['function']}.";
-        \SuiteCRM\ErrorMessage::log("$message: [$email] $where", $logInvalid);
+        \ICTCRM\ErrorMessage::log("$message: [$email] $where", $logInvalid);
     }
     return false;
 }

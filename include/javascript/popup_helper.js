@@ -3,7 +3,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -32,9 +32,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 function closePopup(){var closePopup=window.opener.get_close_popup();if(closePopup){window.close();}}
 function confirmDialog(arrayContents,formName){var newData='';var labels='';var oldData='';SUGAR.util.globalEval("var data = {"+arrayContents.join(",")+"}");var opener=window.opener.document;for(var key in data){var displayValue=replaceHTMLChars(data[key]);if(opener.forms[formName]&&opener.getElementById(key+'_label')!=null&&!key.match(/account/)){var dataLabel=opener.getElementById(key+'_label').innerHTML.replace(/\n/gi,'').replace(/<\/?[^>]+(>|$)/g,"");labels+=dataLabel+' \n';newData+=dataLabel+' '+displayValue+'\n';if(window.opener.document.forms[formName].elements[key]){oldData+=dataLabel+' '+opener.forms[formName].elements[key].value+'\n';}}}

@@ -1,6 +1,6 @@
 <?php
 
-class ViewMetadataTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewMetadataTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testdisplayCheckBoxes()
     {
@@ -83,7 +83,7 @@ class ViewMetadataTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
             $request = $_REQUEST;
         }
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

@@ -2,7 +2,7 @@
 
 require_once 'modules/EmailTemplates/EmailTemplateParser.php';
 
-class EmailTemplateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class EmailTemplateTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -53,7 +53,7 @@ class EmailTemplateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         global $current_user;
 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('email_templates');
         $state->pushGlobals();
@@ -100,7 +100,7 @@ class EmailTemplateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         global $sugar_config;
 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('email_templates');
         $state->pushTable('aod_index');
 
@@ -176,7 +176,7 @@ class EmailTemplateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testcreate_export_query()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -232,9 +232,9 @@ class EmailTemplateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // simple examples
         $emailTemplate = new EmailTemplate();
-        $emailTemplate->body_html = htmlentities('<h1>Hello</h1><br><a href="https://suitecrm.com">text</b>');
+        $emailTemplate->body_html = htmlentities('<h1>Hello</h1><br><a href="https://ictcrm.com">text</b>');
         $emailTemplate->fill_in_additional_detail_fields();
-        $this->assertEquals("Hello\n\n[text](https://suitecrm.com)", $emailTemplate->body);
+        $this->assertEquals("Hello\n\n[text](https://ictcrm.com)", $emailTemplate->body);
 
         // entities and tags
         $emailTemplate = new EmailTemplate();

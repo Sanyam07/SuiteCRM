@@ -1,6 +1,6 @@
 <?php
 
-class OpportunityTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class OpportunityTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -173,7 +173,7 @@ class OpportunityTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testsave()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('opportunities');
         $state->pushTable('opportunities_cstm');
@@ -270,7 +270,7 @@ class OpportunityTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistviewACLHelper()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -294,7 +294,7 @@ class OpportunityTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testgetCurrencyType()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         //execute the method and test if it works and does not throws an exception.
         try {

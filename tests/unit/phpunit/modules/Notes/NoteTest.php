@@ -1,6 +1,6 @@
 <?php
 
-class NoteTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class NoteTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -45,7 +45,7 @@ class NoteTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testmark_deleted()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
 
@@ -67,7 +67,7 @@ class NoteTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testdeleteAttachment()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
 
@@ -164,7 +164,7 @@ class NoteTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistviewACLHelper()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test

@@ -3,7 +3,7 @@
 require_once 'modules/Campaigns/utils.php';
 
 
-class CampaignTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class CampaignTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -16,7 +16,7 @@ class CampaignTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testSubscribeUnsubscribeFromNewsLetterCampaign()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('sugarfeed');
         $state->pushTable('aod_indexevent');
         $state->pushTable('leads_cstm');
@@ -245,7 +245,7 @@ class CampaignTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testSaveAndMarkDeleted()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('campaigns');

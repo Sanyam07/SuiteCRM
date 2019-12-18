@@ -1,6 +1,6 @@
 <?php
 
-class jjwg_MapsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class jjwg_MapsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testjjwg_Maps()
     {
@@ -40,7 +40,7 @@ class jjwg_MapsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('config');
         $state->pushTable('tracker');
 
@@ -138,7 +138,7 @@ class jjwg_MapsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('accounts_cstm');
 
         // test
@@ -166,7 +166,7 @@ class jjwg_MapsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('accounts_cstm');
 
         // test

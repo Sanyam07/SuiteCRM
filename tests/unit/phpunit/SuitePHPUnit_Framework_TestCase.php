@@ -1,10 +1,10 @@
 <?php
-namespace SuiteCRM\Test;
+namespace ICTCRM\Test;
 
 use DBManagerFactory;
 
 /** @noinspection PhpUndefinedClassInspection */
-abstract class SuitePHPUnit_Framework_TestCase extends \SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+abstract class SuitePHPUnit_Framework_TestCase extends \ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
 
     /**

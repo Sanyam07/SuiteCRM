@@ -54,7 +54,7 @@ class PersonModuleCest
         $moduleBuilder->createModule(
             \Page\PersonModule::$PACKAGE_NAME,
             \Page\PersonModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::person
+            \ICTCRM\Enumerator\SugarObjectType::person
         );
     }
 

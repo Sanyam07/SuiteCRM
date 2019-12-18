@@ -1,7 +1,7 @@
 <?php
 
 require_once 'include/utils/mvc_utils.php';
-class mvc_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class mvc_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testloadParentView()
     {
@@ -16,7 +16,7 @@ class mvc_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testgetPrintLink()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         //test without setting REQUEST param

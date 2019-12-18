@@ -1,7 +1,7 @@
 <?php
 /**
  * Class UserWizardCest
- * As an administrative user, I want to use the install wizard (web based) to install SuiteCRM.
+ * As an administrative user, I want to use the install wizard (web based) to install ICTCRM.
  */
 class UserWizardCest
 {
@@ -34,11 +34,11 @@ class UserWizardCest
      * @param InstallTester $I
      * @param \Helper\WebDriverHelper $webDriverHelper
      *
-     * As an administrative user, I want to use the install wizard (web based) to install SuiteCRM.
-     * Given that that I install SuiteCRM with the default configuration settings I
+     * As an administrative user, I want to use the install wizard (web based) to install ICTCRM.
+     * Given that that I install ICTCRM with the default configuration settings I
      * Expect to be able to login as an administrator.
      */
-    public function testScenarioInstallSuiteCRMWithDefaultConfiguration(InstallTester $I, Step\Acceptance\EmailManTester $I2, \Helper\WebDriverHelper $webDriverHelper)
+    public function testScenarioInstallICTCRMWithDefaultConfiguration(InstallTester $I, Step\Acceptance\EmailManTester $I2, \Helper\WebDriverHelper $webDriverHelper)
     {
         $I->wantTo('check the php version meets the recommended requirements.');
         $I->amOnUrl($webDriverHelper->getInstanceURL());

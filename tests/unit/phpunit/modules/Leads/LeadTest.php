@@ -1,6 +1,6 @@
 <?php
 
-class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class LeadTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -16,7 +16,7 @@ class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         //self::markTestIncomplete('Test changes error level');
 
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('inbound_email');
         
 
@@ -43,7 +43,7 @@ class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_account()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -174,7 +174,7 @@ class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testfill_in_additional_list_fields()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('leads');
@@ -217,7 +217,7 @@ class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_list_view_data()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
         $state->pushTable('tracker');
 
@@ -342,7 +342,7 @@ class LeadTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistviewACLHelper()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test

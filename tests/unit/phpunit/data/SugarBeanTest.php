@@ -4,9 +4,9 @@ include_once __DIR__ . '/../../../../include/SubPanel/SubPanelDefinitions.php';
 include_once __DIR__ . '/../../../../modules/Campaigns/ProspectLink.php';
 include_once __DIR__ . '/../../../../modules/AM_ProjectTemplates/AM_ProjectTemplates_sugar.php';
 
-use SuiteCRM\StateCheckerPHPUnitTestCaseAbstract;
-use SuiteCRM\StateSaver;
-use SuiteCRM\Utility\SuiteValidator;
+use ICTCRM\StateCheckerPHPUnitTestCaseAbstract;
+use ICTCRM\StateSaver;
+use ICTCRM\Utility\SuiteValidator;
 
 /** @noinspection PhpUndefinedClassInspection */
 class SugarBeanTest extends StateCheckerPHPUnitTestCaseAbstract
@@ -109,7 +109,7 @@ class SugarBeanTest extends StateCheckerPHPUnitTestCaseAbstract
 
     public function testFactoryGetCachedDeleted()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('leads');
         $state->pushTable('leads_cstm');
         $state->pushTable('sugarfeed');

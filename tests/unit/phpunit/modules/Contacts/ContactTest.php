@@ -1,6 +1,6 @@
 <?php
 
-class ContactTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ContactTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -62,7 +62,7 @@ class ContactTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -171,7 +171,7 @@ class ContactTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_list_view_data()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
         $state->pushTable('tracker');
 

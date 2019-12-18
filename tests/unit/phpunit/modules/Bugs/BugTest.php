@@ -1,7 +1,7 @@
 <?php
 
 
-class BugTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class BugTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -189,7 +189,7 @@ class BugTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('bugs');

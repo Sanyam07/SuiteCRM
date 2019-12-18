@@ -1,6 +1,6 @@
 <?php
 
- class ViewEditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+ class ViewEditTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
  {
      protected function setUp()
      {
@@ -31,7 +31,7 @@
              $session = $_SESSION;
          }
         
-         $state = new SuiteCRM\StateSaver();
+         $state = new ICTCRM\StateSaver();
         
         
          //
@@ -63,7 +63,7 @@
 
      public function testdisplay()
      {
-         $state = new SuiteCRM\StateSaver();
+         $state = new ICTCRM\StateSaver();
 
          //execute the method with essential parameters set. it should return some html.
          $view = new ViewEdit();

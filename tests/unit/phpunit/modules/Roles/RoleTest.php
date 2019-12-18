@@ -1,6 +1,6 @@
 <?php
 
-class RoleTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class RoleTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -91,7 +91,7 @@ class RoleTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
 
         // test

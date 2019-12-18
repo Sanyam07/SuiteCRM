@@ -1,7 +1,7 @@
 <?php
 
 
-class EmailMarketingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class EmailMarketingTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testEmailMarketing()
     {
@@ -42,7 +42,7 @@ class EmailMarketingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testcreate_export_query()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         
         

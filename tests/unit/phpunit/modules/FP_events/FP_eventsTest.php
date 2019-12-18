@@ -1,6 +1,6 @@
 <?php
 
-class FP_eventsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class FP_eventsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testFP_events()
     {
@@ -20,7 +20,7 @@ class FP_eventsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testemail_templates()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         global $app_list_strings;

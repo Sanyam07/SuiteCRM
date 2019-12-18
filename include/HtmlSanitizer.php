@@ -1,10 +1,10 @@
 <?php
 
-namespace SuiteCRM;
+namespace ICTCRM;
 
 /**
  * Class SugarCleaner
- * @package SuiteCRM
+ * @package ICTCRM
  * Html Sanitizer
  */
 class HtmlSanitizer

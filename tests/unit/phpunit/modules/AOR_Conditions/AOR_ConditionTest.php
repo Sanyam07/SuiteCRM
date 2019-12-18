@@ -1,6 +1,6 @@
 <?php
 
-class AOR_ConditionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOR_ConditionTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOR_Condition()
     {
@@ -22,7 +22,7 @@ class AOR_ConditionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('aod_index');
         $state->pushTable('aor_conditions');

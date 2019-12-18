@@ -1,6 +1,6 @@
 <?php
 
-class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOW_WorkFlowTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -37,7 +37,7 @@ class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testmark_delete_related()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aow_conditions');
         $state->pushTable('aow_workflow');
         $state->pushTable('aod_indexevent');
@@ -74,7 +74,7 @@ class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aow_conditions');
         $state->pushTable('aod_indexevent');
         $state->pushTable('aow_workflow');
@@ -123,7 +123,7 @@ class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testrun_flows()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $aowWorkFlow = new AOW_WorkFlow();
@@ -270,7 +270,7 @@ class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //        );
 //
 //
-////        $tmpstate = new SuiteCRM\StateSaver();
+////        $tmpstate = new ICTCRM\StateSaver();
 ////        $tmpstate->pushErrorLevel();
 ////        error_reporting(E_ERROR | E_PARSE);
 //        $query = $aowWorkFlow->build_query_where($aowCondition, $call);
@@ -339,7 +339,7 @@ class AOW_WorkFlowTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testrun_actions()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aow_processed');
         $state->pushTable('tracker');
 

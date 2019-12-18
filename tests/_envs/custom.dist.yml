@@ -7,8 +7,8 @@
 # See the Codeception documentation for more information on how to configure this file:
 # - https://codeception.com/docs/reference/Configuration
 # - https://codeception.com/docs/modules/WebDriver
-# Also see the SuiteCRM Automated Testing documentation:
-# - https://docs.suitecrm.com/developer/automatedtesting/
+# Also see the ICTCRM Automated Testing documentation:
+# - https://docs.ictcrm.com/developer/automatedtesting/
 #
 
 # Uncomment this to run ChromeDriver as a background process whenever the tests are run.
@@ -20,9 +20,9 @@
 #         sleep: 5 # wait 5 seconds for ChromeDriver to start up.
 modules:
   enabled:
-    - \SuiteCRM\Test\Driver\WebDriver
+    - \ICTCRM\Test\Driver\WebDriver
   config:
-    \SuiteCRM\Test\Driver\WebDriver:
+    \ICTCRM\Test\Driver\WebDriver:
       # This URL should be the location of the CRM you want to run
       # tests on, for example "http://localhost:3000".
       url: "http://localhost/"

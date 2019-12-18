@@ -1,6 +1,6 @@
 <?php
 
-class aCaseTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class aCaseTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -42,7 +42,7 @@ class aCaseTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('environment dependency');
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         $aCase = new aCase();
@@ -56,7 +56,7 @@ class aCaseTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_relationship_changes()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         
         $aCase = new aCase();
@@ -221,7 +221,7 @@ class aCaseTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('aop_case_events');
         $state->pushTable('cases');

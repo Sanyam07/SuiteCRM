@@ -2,7 +2,7 @@ owner:
   - salesagility
 
 repo:
-  - SuiteCRM
+  - ICTCRM
 
 members:
   - cameronblaikie
@@ -41,10 +41,10 @@ invalidBranches:
 invalid: >
   Hello and thanks for the contribution! would you be able to rebase this pull request to the hotfix-7.10.x branch?
   we currently don't accept pull requests directly to this branch
-  (See [SuiteDocs](https://docs.suitecrm.com/community/contributing-code/bugs) for more information).
+  (See [SuiteDocs](https://docs.ictcrm.com/community/contributing-code/bugs) for more information).
 eol: >
   Hello and thanks for the contribution! unfortunately this branch is EOL
-  (See our [blog post](https://suitecrm.com/7-8-x-end-of-life/) for more information).
+  (See our [blog post](https://ictcrm.com/7-8-x-end-of-life/) for more information).
 invalidIssueTemplate: >
   Hello and thanks for raising this issue! I notice you don't seem to be following the standard issue template. If this is a bug report, would you be able to go back and edit this issue while following the template and including exact replication steps?
 
@@ -57,7 +57,7 @@ sprintPlanning: >
   We are 1 week away from commencing our Sprint. So we would like to take this opportunity to ask for your nominated issues here in this thread so we can assess, refine and coordinate with ourselves (the Core Team) and the community contributors on the upcoming priorities.
 
 
-  If you are new to this sprint planning then essentially we are asking you, as the users, to post your issues (by referencing the GitHub hash/ID) that you would like to see being tackled. We, the Core Team, will review and select the achievable ones within the sprint and allocate them among ourselves. The others we may label them as Help Wanted which would make them up for grabs by our community code contributors. This process will help encourage ownership of these bugs and their bug fixes. [Find out more of the sprint concept here](https://docs.suitecrm.com/community/nominating-issues-in-sprint-planning) :point_left:
+  If you are new to this sprint planning then essentially we are asking you, as the users, to post your issues (by referencing the GitHub hash/ID) that you would like to see being tackled. We, the Core Team, will review and select the achievable ones within the sprint and allocate them among ourselves. The others we may label them as Help Wanted which would make them up for grabs by our community code contributors. This process will help encourage ownership of these bugs and their bug fixes. [Find out more of the sprint concept here](https://docs.ictcrm.com/community/nominating-issues-in-sprint-planning) :point_left:
 
 
   Sprints are every 2 weeks with the aim to deliver a release every 2 Sprints (monthly).

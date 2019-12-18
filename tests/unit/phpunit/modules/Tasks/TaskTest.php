@@ -1,10 +1,10 @@
 <?php
 
-class TaskTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class TaskTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     /**
      *
-     * @var SuiteCRM\StateSaver
+     * @var ICTCRM\StateSaver
      */
     protected $state;
 
@@ -12,7 +12,7 @@ class TaskTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         parent::setUp();
 
-        $this->state = new SuiteCRM\StateSaver();
+        $this->state = new ICTCRM\StateSaver();
         $this->state->pushTable('aod_index');
         $this->state->pushTable('aod_indexevent');
         $this->state->pushTable('tasks');

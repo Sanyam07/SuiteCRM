@@ -5,7 +5,7 @@ namespace Page;
 use \AcceptanceTester as Tester;
 
 use Codeception\Module;
-use SuiteCRM\Enumerator\DesignBreakPoint;
+use ICTCRM\Enumerator\DesignBreakPoint;
 
 class Design extends Module
 {
@@ -27,7 +27,7 @@ class Design extends Module
     /**
      * @param integer $browserWidth in pixels
      * @return string
-     * @see \SuiteCRM\Enumerator\DesignBreakPoint
+     * @see \ICTCRM\Enumerator\DesignBreakPoint
      */
     public function getBreakpointString()
     {

@@ -1,8 +1,8 @@
 modules:
   enabled:
-    - \SuiteCRM\Test\Driver\WebDriver
+    - \ICTCRM\Test\Driver\WebDriver
   config:
-    \SuiteCRM\Test\Driver\WebDriver:
+    \ICTCRM\Test\Driver\WebDriver:
       url: "http://localhost/"
       wait: 0
       port: 9515 # ChromeDriver port

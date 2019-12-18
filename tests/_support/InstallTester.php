@@ -89,10 +89,10 @@ class InstallTester extends \Codeception\Actor
 
         // Select Database type
         switch ($webDriverHelper->getDatabaseDriver()) {
-            case \SuiteCRM\Enumerator\DatabaseDriver::MYSQL:
+            case \ICTCRM\Enumerator\DatabaseDriver::MYSQL:
                 $I->checkOption('#setup_db_type[value=mysql]');
                 break;
-            case \SuiteCRM\Enumerator\DatabaseDriver::MSSQL:
+            case \ICTCRM\Enumerator\DatabaseDriver::MSSQL:
                 $I->checkOption('#setup_db_type[value=mssql]');
                 // clear instance field
                 $I->fillField('#setup_db_host_instance', '');

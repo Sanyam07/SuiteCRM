@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2019 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,15 +33,15 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 /**
  *
  * This is a stand alone file that can be run from the command prompt for upgrading a
- * SuiteCRM Instance. Three parameters are required to be defined in order to execute this file.
+ * ICTCRM Instance. Three parameters are required to be defined in order to execute this file.
  * php.exe -f silentUpgrade.php [Path to Upgrade Package zip] [Path to Log file] [Path to Instance]
  * See below the Usage for more details.
  */
@@ -115,7 +115,7 @@ function checkLoggerSettings()
             'file' =>
                 [
                     'ext' => '.log',
-                    'name' => 'suitecrm',
+                    'name' => 'ictcrm',
                     'dateFormat' => '%c',
                     'maxSize' => '10MB',
                     'maxLogs' => 10,
@@ -278,7 +278,7 @@ function merge_passwordsetting($sugar_config, $sugar_version)
     $sugar_config = sugarArrayMerge($passwordsetting_defaults, $sugar_config);
 
     // need to override version with default no matter what
-    $sugar_config['suitecrm_version'] = $suitecrm_version;
+    $sugar_config['ictcrm_version'] = $ictcrm_version;
 
     ksort($sugar_config);
 
@@ -319,7 +319,7 @@ function addDefaultModuleRoles($defaultRoles = [])
  */
 function verifyArguments($argv, $usage_regular)
 {
-    $cwd = getcwd(); // default to current, assumed to be in a valid SuiteCRM root dir.
+    $cwd = getcwd(); // default to current, assumed to be in a valid ICTCRM root dir.
     if (isset($argv[3])) {
         if (is_dir($argv[3])) {
             $cwd = $argv[3];
@@ -352,7 +352,7 @@ function verifyArguments($argv, $usage_regular)
     } else {
         //this should be a regular sugar install
         echo "*******************************************************************************\n";
-        echo "*** ERROR: Tried to execute in a non-SuiteCRM root directory.\n";
+        echo "*** ERROR: Tried to execute in a non-ICTCRM root directory.\n";
         exit(1);
     }
 
@@ -387,7 +387,7 @@ if (isset($_SERVER['HTTP_USER_AGENT'])) {
 $_SERVER['PHP_SELF'] = 'silentUpgrade.php';
 
 $usage_regular = <<<eoq2
-Usage: php.exe -f silentUpgrade.php [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [admin-user]
+Usage: php.exe -f silentUpgrade.php [upgradeZipFile] [logFile] [pathToICTCRMInstance] [admin-user]
 
 On Command Prompt Change directory to where silentUpgrade.php resides. Then type path to
 php.exe followed by -f silentUpgrade.php and the arguments.
@@ -398,7 +398,7 @@ Example:
 Arguments:
     upgradeZipFile                       : Upgrade package file.
     logFile                              : Silent Upgarde log file.
-    pathToSuiteCRMInstance                  : Suite Instance instance being upgraded.
+    pathToICTCRMInstance                    : Suite Instance instance being upgraded.
     admin-user                           : admin user performing the upgrade
 eoq2;
 // END USAGE
@@ -422,7 +422,7 @@ define('SUGARCRM_INSTALL', 'SugarCRM_Install');
 define('DCE_INSTANCE', 'DCE_Instance');
 
 global $cwd;
-$cwd = getcwd(); // default to current, assumed to be in a valid SuiteCRM root dir.
+$cwd = getcwd(); // default to current, assumed to be in a valid ICTCRM root dir.
 
 $upgradeType = verifyArguments($argv, $usage_regular);
 
@@ -484,7 +484,7 @@ if ($upgradeType !== constant('DCE_INSTANCE')) {
         chdir($cwd);
     }
 
-    require_once "{$cwd}/suitecrm_version.php";
+    require_once "{$cwd}/ictcrm_version.php";
     require_once "{$cwd}/sugar_version.php"; // provides $sugar_version & $sugar_flavor
 
     $GLOBALS['log'] = LoggerManager::getLogger();
@@ -837,7 +837,7 @@ if ($upgradeType !== constant('DCE_INSTANCE')) {
                 $new_upgrade->name = $zip_from_dir;
                 $new_upgrade->description = $manifest['description'];
                 $new_upgrade->type = 'patch';
-                $new_upgrade->version = $suitecrm_version;
+                $new_upgrade->version = $ictcrm_version;
                 $new_upgrade->status = 'installed';
                 $new_upgrade->manifest = (!empty($_SESSION['install_manifest']) ? $_SESSION['install_manifest'] : '');
 

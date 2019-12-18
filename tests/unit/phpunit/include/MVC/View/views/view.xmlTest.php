@@ -1,7 +1,7 @@
 <?php
 
 
-class ViewXMLTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewXMLTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testViewXML()
     {
@@ -15,7 +15,7 @@ class ViewXMLTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testdisplay()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

@@ -1,7 +1,7 @@
 <?php
 
 
-class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class UserTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testgetSignatureButtons()
     {
@@ -68,7 +68,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetDefaultSignature()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -328,7 +328,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testsaveAndOthers()
     {
         self::markTestIncomplete('environment dependency');
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -684,7 +684,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_list_view_data()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -792,7 +792,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsetDefaultsInConfig()
     {
-        self::markTestIncomplete('Incorrect state hash (in PHPUnitTest): Hash doesn\'t match at key "filesys::/var/www/html/SuiteCRM/config.php".');
+        self::markTestIncomplete('Incorrect state hash (in PHPUnitTest): Hash doesn\'t match at key "filesys::/var/www/html/ICTCRM/config.php".');
         $user = new User();
 
         $result = $user->setDefaultsInConfig();
@@ -806,7 +806,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetEmailLink2()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -934,7 +934,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetDeveloperModules()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -954,7 +954,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testisDeveloperForModule()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -983,7 +983,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetAdminModules()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -1003,7 +1003,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testisAdminForModule()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -1129,7 +1129,7 @@ class UserTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         global $app_strings;
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('email_addresses_audit');
 
         // setup

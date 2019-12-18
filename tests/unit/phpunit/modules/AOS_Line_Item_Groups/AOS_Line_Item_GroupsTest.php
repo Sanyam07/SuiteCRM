@@ -1,6 +1,6 @@
 <?php
 
-class AOS_Line_Item_GroupsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_Line_Item_GroupsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -30,7 +30,7 @@ class AOS_Line_Item_GroupsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstr
 
     public function testsave_groups()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aos_line_item_groups');
         $state->pushTable('tracker');
@@ -67,7 +67,7 @@ class AOS_Line_Item_GroupsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstr
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aos_line_item_groups');
         $state->pushTable('tracker');
         

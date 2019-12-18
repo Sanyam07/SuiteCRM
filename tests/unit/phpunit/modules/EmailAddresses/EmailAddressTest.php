@@ -1,7 +1,7 @@
 <?php
 
 
-class EmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class EmailAddressTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testEmailAddress()
     {
@@ -22,7 +22,7 @@ class EmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testsave()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
         $state->pushTable('tracker');
         $state->pushTable('aod_index');

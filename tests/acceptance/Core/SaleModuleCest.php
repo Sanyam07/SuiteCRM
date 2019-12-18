@@ -54,7 +54,7 @@ class SaleModuleCest
         $moduleBuilder->createModule(
             \Page\SaleModule::$PACKAGE_NAME,
             \Page\SaleModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::sale
+            \ICTCRM\Enumerator\SugarObjectType::sale
         );
     }
 

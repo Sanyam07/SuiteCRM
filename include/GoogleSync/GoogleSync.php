@@ -5,7 +5,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -34,9 +34,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');
@@ -48,7 +48,7 @@ require_once __DIR__ . '/GoogleSyncHelper.php';
 /**
  * Implements Google Calendar Syncing
  *
- * @license https://raw.githubusercontent.com/salesagility/SuiteCRM/master/LICENSE.txt
+ * @license https://raw.githubusercontent.com/salesagility/ICTCRM/master/LICENSE.txt
  * GNU Affero General Public License version 3
  * @author Benjamin Long <ben@offsite.guru>
  */
@@ -135,7 +135,7 @@ class GoogleSync extends GoogleSyncBase
     /**
      * Perform the sync for a user
      *
-     * @param string $id The SuiteCRM user id
+     * @param string $id The ICTCRM user id
      *
      * @return bool true, unless an exception is thrown by called function
      */
@@ -145,7 +145,7 @@ class GoogleSync extends GoogleSyncBase
 
         $meetings = $this->getUserMeetings($id);
 
-        // First, we look for SuiteCRM meetings that are not on Google
+        // First, we look for ICTCRM meetings that are not on Google
         foreach ($meetings as $meeting) {
             $gevent = null;
             if (!empty($meeting->gsync_id)) {
@@ -171,8 +171,8 @@ class GoogleSync extends GoogleSyncBase
      *
      * The user id is used as the key
      *
-     * @param string $id : the SuiteCRM user id
-     * @param string $name : the SuiteCRM user name.
+     * @param string $id : the ICTCRM user id
+     * @param string $name : the ICTCRM user name.
      *  Not really used for anything other than reference.
      *
      * @return bool Success/Failure

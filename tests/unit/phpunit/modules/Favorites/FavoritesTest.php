@@ -1,6 +1,6 @@
 <?php
 
-class FavoritesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class FavoritesTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testFavorites()
     {

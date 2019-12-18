@@ -1,6 +1,6 @@
 <?php
 
-class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class MeetingTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -39,7 +39,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testACLAccess()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -72,7 +72,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testSaveAndMarkdeletedAndSetAcceptStatus()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('meetings');
@@ -157,7 +157,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testfill_in_additional_detail_fields()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -194,7 +194,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_list_view_data()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -267,7 +267,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
         $this->assertEquals($meeting->name, $result->_tpl_vars['MEETING_SUBJECT']);
         $this->assertEquals($meeting->status, $result->_tpl_vars['MEETING_STATUS']);
-        $this->assertEquals('SuiteCRM', $result->_tpl_vars['MEETING_TYPE']);
+        $this->assertEquals('ICTCRM', $result->_tpl_vars['MEETING_TYPE']);
         $this->assertEquals($meeting->duration_hours, $result->_tpl_vars['MEETING_HOURS']);
         $this->assertEquals($meeting->duration_minutes, $result->_tpl_vars['MEETING_MINUTES']);
         $this->assertEquals($meeting->description, $result->_tpl_vars['MEETING_DESCRIPTION']);
@@ -354,7 +354,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistviewACLHelper()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -418,7 +418,7 @@ class MeetingTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetMeetingsExternalApiDropDown()
     {
         $actual = getMeetingsExternalApiDropDown();
-        $expected = array('Sugar' => 'SuiteCRM');
+        $expected = array('Sugar' => 'ICTCRM');
         $this->assertSame($expected, $actual);
     }
 

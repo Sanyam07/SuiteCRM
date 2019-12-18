@@ -1,11 +1,11 @@
 <?php
 
 
-class ViewFactoryTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewFactoryTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testloadView()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

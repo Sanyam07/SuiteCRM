@@ -4,9 +4,9 @@ modules:
         - \Helper\Acceptance
         - \Helper\WebDriverHelper
         - \Helper\Install
-        - \SuiteCRM\Test\Driver\WebDriver
+        - \ICTCRM\Test\Driver\WebDriver
     config:
-      \SuiteCRM\Test\Driver\WebDriver:
+      \ICTCRM\Test\Driver\WebDriver:
         url: "https://demo.suiteondemand.com/"
         browser: chrome
         restart: true

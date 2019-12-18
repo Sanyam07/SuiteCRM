@@ -1,5 +1,5 @@
 <?php
-use SuiteCRM\Utility\SuiteValidator;
+use ICTCRM\Utility\SuiteValidator;
 
 //Grab the survey
 if (empty($_REQUEST['id'])) {

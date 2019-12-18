@@ -1,6 +1,6 @@
 <?php
 
-use SuiteCRM\Utility\Paths;
+use ICTCRM\Utility\Paths;
 
 $paths = new Paths();
 

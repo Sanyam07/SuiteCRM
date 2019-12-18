@@ -1,6 +1,6 @@
 <?php
 
-class ViewImportvcardsaveTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewImportvcardsaveTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function test__construct()
     {
@@ -14,7 +14,7 @@ class ViewImportvcardsaveTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstra
     //incomplete test. this method uses exit() so it cannot be tested.
     public function testdisplay()
     {
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //
 //
 //

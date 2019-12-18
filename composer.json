@@ -1,17 +1,17 @@
 {
-  "name": "salesagility/suitecrm",
-  "description": "SuiteCRM",
-  "homepage": "https://suitecrm.com",
+  "name": "salesagility/ictcrm",
+  "description": "ICTCRM",
+  "homepage": "https://ictcrm.com",
   "type": "project",
   "license": "GPL-3.0",
   "authors": [],
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://github.com/salesagility/SuiteCRM/issues",
-    "wiki": "https://docs.suitecrm.com",
-    "forum": "https://suitecrm.com/suitecrm/forum",
-    "chat": "https://gitter.im/suitecrm/Lobby",
-    "source": "https://github.com/salesagility/SuiteCRM"
+    "issues": "https://github.com/salesagility/ICTCRM/issues",
+    "wiki": "https://docs.ictcrm.com",
+    "forum": "https://ictcrm.com/ictcrm/forum",
+    "chat": "https://gitter.im/ictcrm/Lobby",
+    "source": "https://github.com/salesagility/ICTCRM"
   },
   "config": {
     "vendor-dir": "vendor",
@@ -85,16 +85,16 @@
       "deprecated.php"
     ],
     "psr-4": {
-      "SuiteCRM\\": [
+      "ICTCRM\\": [
         "lib/",
         "include/",
-        "tests/SuiteCRM/",
-        "tests/unit/phpunit/lib/SuiteCRM/"
+        "tests/ICTCRM/",
+        "tests/unit/phpunit/lib/ICTCRM/"
       ],
-      "SuiteCRM\\Custom\\": [
+      "ICTCRM\\Custom\\": [
         "custom/lib"
       ],
-      "SuiteCRM\\Modules\\": [
+      "ICTCRM\\Modules\\": [
         "modules/"
       ]
     },

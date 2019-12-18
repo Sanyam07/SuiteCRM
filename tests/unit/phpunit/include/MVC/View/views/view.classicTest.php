@@ -1,6 +1,6 @@
 <?php
 
-class ViewClassicTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewClassicTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -35,7 +35,7 @@ class ViewClassicTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //            $session = $_SESSION;
 //        }
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //
 //
 //        //

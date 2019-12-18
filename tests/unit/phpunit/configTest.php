@@ -1,11 +1,11 @@
 <?php
 
-class configTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class configTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function test_config()
     {
         global $sugar_config;
-        $this->assertNotEmpty($sugar_config, 'SuiteCRM config is empty');
+        $this->assertNotEmpty($sugar_config, 'ICTCRM config is empty');
     }
     
     public function testFoo()

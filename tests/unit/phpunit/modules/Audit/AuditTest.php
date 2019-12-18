@@ -1,7 +1,7 @@
 <?php
 
 require_once 'modules/Audit/Audit.php';
-class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AuditTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -36,7 +36,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testcreate_export_query()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
 
@@ -55,7 +55,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_list_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
         //execute the method and test if it works and does not throws an exception.
@@ -73,7 +73,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_detail_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
         //execute the method and test if it works and does not throws an exception.
@@ -91,7 +91,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_parent_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
         //execute the method and test if it works and does not throws an exception.
@@ -109,7 +109,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_list_view_data()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
         //execute the method and test if it works and does not throws an exception.
@@ -127,7 +127,7 @@ class AuditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_audit_link()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $audit = new Audit();
         //execute the method and test if it works and does not throws an exception.

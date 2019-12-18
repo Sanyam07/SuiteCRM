@@ -1,6 +1,6 @@
 <?php
 
-class ProjectTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ProjectTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -60,7 +60,7 @@ class ProjectTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_relationship_changes()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushGlobals();
         

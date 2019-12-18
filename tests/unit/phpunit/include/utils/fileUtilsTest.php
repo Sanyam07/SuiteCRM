@@ -1,7 +1,7 @@
 <?php
 
 require_once 'include/utils/file_utils.php';
-class file_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class file_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -23,24 +23,24 @@ class file_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         $this->assertSame($expected, $actual);
 
         //a simple valid path
-        $expected = '/SuiteCRM-develop/include/utils';
-        $path = '\SuiteCRM-develop\include\utils';
+        $expected = '/ICTCRM-develop/include/utils';
+        $path = '\ICTCRM-develop\include\utils';
         $actual = clean_path($path);
         $this->assertSame($expected, $actual);
 
         //valid network path
-        $expected = '//SuiteCRM-develop/include/utils';
-        $path = '\\\\/SuiteCRM-develop/include/utils';
+        $expected = '//ICTCRM-develop/include/utils';
+        $path = '\\\\/ICTCRM-develop/include/utils';
         $actual = clean_path($path);
         $this->assertSame($expected, $actual);
 
-        $expected = '/SuiteCRM-develop/include/utils';
-        $path = '/SuiteCRM-develop/./include/utils';
+        $expected = '/ICTCRM-develop/include/utils';
+        $path = '/ICTCRM-develop/./include/utils';
         $actual = clean_path($path);
         $this->assertSame($expected, $actual);
 
-        $expected = '/SuiteCRM-develop/include/utils';
-        $path = '/SuiteCRM-develop//include/utils';
+        $expected = '/ICTCRM-develop/include/utils';
+        $path = '/ICTCRM-develop//include/utils';
         $actual = clean_path($path);
         $this->assertSame($expected, $actual);
     }

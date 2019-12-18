@@ -1,7 +1,7 @@
 <?php
 
 
-class ProspectTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ProspectTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -78,7 +78,7 @@ class ProspectTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testconverted_prospect()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $prospect = new Prospect();
 

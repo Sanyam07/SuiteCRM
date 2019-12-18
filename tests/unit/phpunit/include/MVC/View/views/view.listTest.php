@@ -1,6 +1,6 @@
 <?php
 
-class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewListTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -14,7 +14,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistViewProcess()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -85,7 +85,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testViewList()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -108,7 +108,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testlistViewPrepare()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -150,7 +150,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testprepareSearchForm()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -182,7 +182,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testprocessSearchForm()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -221,7 +221,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testpreDisplay()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -243,7 +243,7 @@ class ViewListTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testdisplay()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');

@@ -1,11 +1,11 @@
 <?php
 
-class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class EAPMTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testEAPM()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
@@ -39,7 +39,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // store state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
@@ -62,7 +62,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // store state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
@@ -91,7 +91,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // store state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
@@ -123,7 +123,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('eapm table fails');
         
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
         
@@ -165,7 +165,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_detail_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $eapmTable = $state->pushTable('eapm');
         $state->pushTable('tracker');
         $state->pushTable('aod_index');
@@ -192,7 +192,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // store state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
         
@@ -217,7 +217,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testsave_cleanup()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
         
@@ -241,7 +241,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testdelete_user_accounts()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
         
@@ -266,7 +266,7 @@ class EAPMTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testgetEAPMExternalApiDropDown()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $eapmTable = $state->pushTable('eapm');
         

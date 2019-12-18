@@ -3,7 +3,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -32,9 +32,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 if (!defined('sugarEntry') || !sugarEntry) {
@@ -43,11 +43,11 @@ if (!defined('sugarEntry') || !sugarEntry) {
 
 use Elasticsearch\Client;
 use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use SuiteCRM\Search\ElasticSearch\ElasticSearchClientBuilder;
-use SuiteCRM\Search\Exceptions\SearchInvalidRequestException;
-use SuiteCRM\Search\SearchEngine;
-use SuiteCRM\Search\SearchQuery;
-use SuiteCRM\Search\SearchResults;
+use ICTCRM\Search\ElasticSearch\ElasticSearchClientBuilder;
+use ICTCRM\Search\Exceptions\SearchInvalidRequestException;
+use ICTCRM\Search\SearchEngine;
+use ICTCRM\Search\SearchQuery;
+use ICTCRM\Search\SearchResults;
 
 /**
  * SearchEngine that use Elasticsearch index for performing almost real-time search.

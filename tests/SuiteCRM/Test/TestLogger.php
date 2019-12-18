@@ -1,5 +1,5 @@
 <?php
-namespace SuiteCRM\Test;
+namespace ICTCRM\Test;
 
 /**
  * Class TestLogger

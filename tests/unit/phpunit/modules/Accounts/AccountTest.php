@@ -1,7 +1,7 @@
 <?php
 
 
-class AccountTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AccountTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {

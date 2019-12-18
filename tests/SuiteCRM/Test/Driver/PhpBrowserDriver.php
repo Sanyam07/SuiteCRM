@@ -1,6 +1,6 @@
 <?php
 
-namespace SuiteCRM\Test\Driver;
+namespace ICTCRM\Test\Driver;
 
 class PhpBrowserDriver extends \Codeception\Module\PhpBrowser
 {

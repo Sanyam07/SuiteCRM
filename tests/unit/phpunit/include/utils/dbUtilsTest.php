@@ -1,7 +1,7 @@
 <?php
 
 require_once 'include/utils/db_utils.php';
-class db_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class db_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function db_convertProvider()
     {
@@ -32,7 +32,7 @@ class db_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
      */
     public function testdb_convert($string, $type, $params, $expected)
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         
         //execute the method and test if it returns expected values for all types
@@ -109,12 +109,12 @@ class db_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         //valid value
         $expected = true;
-        $actual = isValidDBName('suitecrmtest', 'mysql');
+        $actual = isValidDBName('ictcrmtest', 'mysql');
         $this->assertSame($expected, $actual);
 
         //invalid value
         $expected = false;
-        $actual = isValidDBName('suite/crm.test', 'mysql');
+        $actual = isValidDBName('ict/crm.test', 'mysql');
         $this->assertSame($expected, $actual);
     }
 }

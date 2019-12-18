@@ -1,6 +1,6 @@
 <?php
 
-class AOR_Scheduled_ReportsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOR_Scheduled_ReportsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -13,7 +13,7 @@ class AOR_Scheduled_ReportsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbst
 
     public function testSaveAndGet_email_recipients()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aor_scheduled_reports');
         $state->pushTable('tracker');
         $state->pushTable('aod_index');
@@ -69,7 +69,7 @@ class AOR_Scheduled_ReportsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbst
     }
 
     public function test_ReportRelation() {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aor_reports');
         $state->pushTable('aor_scheduled_reports');
         $state->pushTable('aod_indexevent');

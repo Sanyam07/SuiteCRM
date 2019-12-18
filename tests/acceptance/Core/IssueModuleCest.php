@@ -52,7 +52,7 @@ class IssueModuleCest
         $moduleBuilder->createModule(
             \Page\IssueModule::$PACKAGE_NAME,
             \Page\IssueModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::issue
+            \ICTCRM\Enumerator\SugarObjectType::issue
         );
     }
 

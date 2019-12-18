@@ -1,7 +1,7 @@
 <?php
 
 
-class AOW_ActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOW_ActionTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -32,7 +32,7 @@ class AOW_ActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aow_actions');
 
         // test

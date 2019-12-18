@@ -1,7 +1,7 @@
 <?php
 
 
-class CampaignTrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class CampaignTrackerTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -14,7 +14,7 @@ class CampaignTrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testCampaignTracker()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
 
         //execute the contructor and check for the Object type and  attributes
@@ -35,7 +35,7 @@ class CampaignTrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('campaign_trkrs');
         $state->pushTable('aod_index');
         $state->pushTable('tracker');

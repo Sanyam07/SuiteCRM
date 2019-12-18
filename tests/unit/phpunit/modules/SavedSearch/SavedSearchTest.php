@@ -1,6 +1,6 @@
 <?php
 
-class SavedSearchTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class SavedSearchTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -145,7 +145,7 @@ class SavedSearchTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testfill_in_additional_list_fields()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('saved_search');
 
         // test
@@ -166,7 +166,7 @@ class SavedSearchTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testpopulateRequest()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('saved_search');
         $state->pushGlobals();
 

@@ -22,13 +22,13 @@ function tempFileWithMode($mode)
     return $file;
 }
 
-class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class InboundEmailTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
 
     protected function storeStateAll()
     {
         // save state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('inbound_email_cache_ts');
         $state->pushTable('inbound_email_autoreply');
         $state->pushTable('inbound_email');
@@ -65,7 +65,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailServerFolderInboundForceFirstMailbox()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $fake = new ImapHandlerFakeData();
         $fake->add('isAvailable', null, [true]);
@@ -91,7 +91,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailServerFolderInboundForceTestFolder()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $fake = new ImapHandlerFakeData();
         $fake->add('isAvailable', null, [true]);
@@ -116,7 +116,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailServerFolderInboundForce()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $fake = new ImapHandlerFakeData();
         $fake->add('isAvailable', null, [true]);
@@ -140,7 +140,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailServerFolderSentForce()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $fake = new ImapHandlerFakeData();
         $fake->add('isAvailable', null, [true]);
@@ -164,7 +164,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailserverNoGood()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $fake = new ImapHandlerFakeData();
@@ -199,7 +199,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testConnectMailserverUseSsl()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $fake = new ImapHandlerFakeData();
@@ -238,7 +238,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testFindOptimumSettingsFalsePositive()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $fake = new ImapHandlerFakeData();
@@ -324,7 +324,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testFindOptimumSettingsOk()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $fake = new ImapHandlerFakeData();
@@ -372,7 +372,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testFindOptimumSettingsUseSsl()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $fake = new ImapHandlerFakeData();
@@ -4098,7 +4098,7 @@ class InboundEmailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
         //retrieve Outbound Server Id back and verify
         $result = $inboundEmail->getUsersDefaultOutboundServerId($user);
-        $isValidator = new SuiteCRM\Utility\SuiteValidator();
+        $isValidator = new ICTCRM\Utility\SuiteValidator();
 
         $this->assertTrue($isValidator->isValidId($result));
         

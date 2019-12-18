@@ -1,7 +1,7 @@
 <?php
 
-use SuiteCRM\Search\SearchEngine;
-use SuiteCRM\Search\SearchQuery;
+use ICTCRM\Search\SearchEngine;
+use ICTCRM\Search\SearchQuery;
 
 class MockSearch extends SearchEngine
 {

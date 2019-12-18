@@ -76,7 +76,7 @@ Desktop.ini
 # Disytel
 lang_cmp.php
 .kdev4/
-SuiteCRM.kdev4
+ICTCRM.kdev4
 
 #Ignore composer vendor folder
 vendor/

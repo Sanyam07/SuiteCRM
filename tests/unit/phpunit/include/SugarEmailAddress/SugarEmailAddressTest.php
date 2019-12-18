@@ -1,9 +1,9 @@
 <?php
 
-use SuiteCRM\Test\TestLogger;
+use ICTCRM\Test\TestLogger;
 
 /** @noinspection PhpUndefinedClassInspection */
-class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class SugarEmailAddressTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
 
     /**
@@ -13,7 +13,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     
     /**
      *
-     * @var \SuiteCRM\StateSaver
+     * @var \ICTCRM\StateSaver
      */
     protected $stateSaver;
 
@@ -26,7 +26,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         parent::setUp();
         
-        $this->stateSaver = new SuiteCRM\StateSaver();
+        $this->stateSaver = new ICTCRM\StateSaver();
         $this->stateSaver->pushTable('contacts');
         $this->stateSaver->pushTable('email_addr_bean_rel');
         $this->stateSaver->pushTable('email_addresses');
@@ -76,7 +76,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addr_bean_rel');
 
         // test
@@ -271,7 +271,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -504,7 +504,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -780,7 +780,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
      */
     public function testPopulateAddresses()
     {
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $logger = $GLOBALS['log'];
@@ -1009,7 +1009,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
@@ -1267,14 +1267,14 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('tracker');
         $state->pushTable('email_addresses');
 
         // test
         
-        $isValidator = new \SuiteCRM\Utility\SuiteValidator();
+        $isValidator = new \ICTCRM\Utility\SuiteValidator();
         
         
         $query = "SELECT * FROM email_addr_bean_rel";
@@ -2282,7 +2282,7 @@ class SugarEmailAddressTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //        self::markTestIncomplete('COI_STAT_CONFIRMED_OPT_IN');
 //        // store state
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //        $state->pushGlobals();
 //        $state->pushTable('email_addresses');
 //

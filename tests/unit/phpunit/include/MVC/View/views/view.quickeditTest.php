@@ -1,6 +1,6 @@
 <?php
 
-class ViewQuickeditTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewQuickeditTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {

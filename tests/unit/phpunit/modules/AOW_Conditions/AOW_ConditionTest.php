@@ -1,6 +1,6 @@
 <?php
 
-class AOW_ConditionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOW_ConditionTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -31,7 +31,7 @@ class AOW_ConditionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbean_implements()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -46,7 +46,7 @@ class AOW_ConditionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aow_conditions');
         $state->pushTable('aod_indexevent');
         

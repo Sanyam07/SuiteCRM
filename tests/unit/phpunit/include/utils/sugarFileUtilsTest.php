@@ -1,7 +1,7 @@
 <?php
 
 require_once 'include/utils/sugar_file_utils.php';
-class sugar_file_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class sugar_file_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
 
     //@todo: check this - vfs does not seem to be working...

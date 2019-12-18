@@ -3,7 +3,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -32,12 +32,12 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
-namespace SuiteCRM\Search\ElasticSearch;
+namespace ICTCRM\Search\ElasticSearch;
 
 if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');
@@ -49,13 +49,13 @@ use Carbon\Carbon;
 use Monolog\Logger;
 use Elasticsearch\Client;
 use JsonSchema\Exception\RuntimeException;
-use SuiteCRM\Search\Index\AbstractIndexer;
-use SuiteCRM\Search\Index\IndexingLockFileTrait;
+use ICTCRM\Search\Index\AbstractIndexer;
+use ICTCRM\Search\Index\IndexingLockFileTrait;
 use Symfony\Component\Yaml\Parser as YamlParser;
-use SuiteCRM\Search\Index\IndexingSchedulerTrait;
-use SuiteCRM\Search\Index\IndexingStatisticsTrait;
-use SuiteCRM\Search\Index\Documentify\AbstractDocumentifier;
-use SuiteCRM\Search\Index\Documentify\SearchDefsDocumentifier;
+use ICTCRM\Search\Index\IndexingSchedulerTrait;
+use ICTCRM\Search\Index\IndexingStatisticsTrait;
+use ICTCRM\Search\Index\Documentify\AbstractDocumentifier;
+use ICTCRM\Search\Index\Documentify\SearchDefsDocumentifier;
 
 /**
  * Class ElasticSearchIndexer takes care of creating a search index for the database.

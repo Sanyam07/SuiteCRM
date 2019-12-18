@@ -1,14 +1,14 @@
 <?php
 
 
-class LogicHookTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class LogicHookTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected $stateSaver;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->stateSaver = new SuiteCRM\StateSaver();
+        $this->stateSaver = new ICTCRM\StateSaver();
         $this->stateSaver->pushTable('email_addresses');
     }
     

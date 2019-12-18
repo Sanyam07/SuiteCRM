@@ -1,7 +1,7 @@
 <?php
 
 
-class AdministrationTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AdministrationTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -61,7 +61,7 @@ class AdministrationTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('environment dependency');
         
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('config');
         $state->pushGlobals();
 
@@ -85,7 +85,7 @@ class AdministrationTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('environment dependency');
         
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('config');
         $state->pushGlobals();
 

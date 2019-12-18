@@ -1,6 +1,6 @@
 <?php
 
-class ACLActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ACLActionTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -20,7 +20,7 @@ class ACLActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('environment dependency');
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //        $state->pushTable('acl_actions');
 //        $state->pushGlobals();
 //
@@ -46,7 +46,7 @@ class ACLActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('environment dependency');
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //        $state->pushTable('acl_actions');
 //        $state->pushTable('aod_index');
 //
@@ -121,7 +121,7 @@ class ACLActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testuserNeedsSecurityGroup()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $this->assertFalse(ACLAction::userNeedsSecurityGroup('1', '', ''));//test with empty module and action
@@ -136,7 +136,7 @@ class ACLActionTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('Need to fix checking user access. Hint: session is a system state perhaps its failing because the user session');
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //        $state->pushGlobals();
 //
 //        $this->assertFalse(ACLAction::userHasAccess('', '', '')); //test with empty module and action

@@ -2,9 +2,9 @@
 
 /**
  * @param \Psr\Container\ContainerInterface $container
- * @return \SuiteCRM\Utility\ApplicationLanguage
+ * @return \ICTCRM\Utility\ApplicationLanguage
  */
 $container['ApplicationLanguages'] = function ($container) {
-    $applicationLanguage = new \SuiteCRM\Utility\ApplicationLanguage();
+    $applicationLanguage = new \ICTCRM\Utility\ApplicationLanguage();
     return $applicationLanguage;
 };

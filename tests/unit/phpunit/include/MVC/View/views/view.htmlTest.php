@@ -1,6 +1,6 @@
 <?php
 
-class ViewHtmlTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewHtmlTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -22,7 +22,7 @@ class ViewHtmlTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testdisplay()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

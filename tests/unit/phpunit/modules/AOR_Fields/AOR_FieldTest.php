@@ -1,7 +1,7 @@
 <?php
 
 
-class AOR_FieldTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOR_FieldTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOR_Field()
     {
@@ -23,7 +23,7 @@ class AOR_FieldTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('aor_fields');

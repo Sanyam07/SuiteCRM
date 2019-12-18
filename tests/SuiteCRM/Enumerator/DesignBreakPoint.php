@@ -1,6 +1,6 @@
 <?php
 
-namespace SuiteCRM\Enumerator;
+namespace ICTCRM\Enumerator;
 
 class DesignBreakPoint
 {

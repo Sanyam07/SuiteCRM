@@ -4,7 +4,7 @@ namespace Helper;
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-use SuiteCRM\Enumerator\DatabaseDriver;
+use ICTCRM\Enumerator\DatabaseDriver;
 
 /**
  * Class WebDriverHelper
@@ -15,7 +15,7 @@ class WebDriverHelper extends \Codeception\Module
 {
     public function getConfig()
     {
-        $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+        $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
         return $webDriver->_getConfig();
     }
 
@@ -27,7 +27,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envInstanceURL = getenv('INSTANCE_URL');
         if ($envInstanceURL === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['url'])) {
                 // return default
@@ -49,7 +49,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabaseDriver = getenv('DATABASE_DRIVER');
         if ($envDatabaseDriver === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['database_driver'])) {
                 // return default
@@ -70,7 +70,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabaseName = getenv('DATABASE_NAME');
         if ($envDatabaseName === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['database_name'])) {
                 // return default
@@ -92,7 +92,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabaseHost = getenv('DATABASE_HOST');
         if ($envDatabaseHost === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['database_host'])) {
                 // return default
@@ -113,7 +113,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabaseUser = getenv('DATABASE_USER');
         if ($envDatabaseUser === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['database_user'])) {
                 // return default
@@ -134,7 +134,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabasePassword = getenv('DATABASE_PASSWORD');
         if ($envDatabasePassword === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['database_password'])) {
                 // return default
@@ -156,7 +156,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabasePassword = getenv('INSTANCE_ADMIN_USER');
         if ($envDatabasePassword === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['INSTANCE_ADMIN_USER'])) {
                 // return default
@@ -177,7 +177,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envDatabasePassword = getenv('INSTANCE_ADMIN_PASSWORD');
         if ($envDatabasePassword === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['INSTANCE_ADMIN_PASSWORD'])) {
                 // return default
@@ -198,7 +198,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envElasticSearchHost = getenv('INSTANCE_ELASTIC_SEARCH_HOST');
         if ($envElasticSearchHost === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config['INSTANCE_ELASTIC_SEARCH_HOST'])) {
                 // return default
@@ -220,7 +220,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envBrowserStackUsername = getenv('BROWSERSTACK_USERNAME');
         if ($envBrowserStackUsername === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config["capabilities"]["browserstack.user"])) {
                 // return default
@@ -242,7 +242,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envBrowserStackAccessKey = getenv('BROWSERSTACK_ACCESS_KEY');
         if ($envBrowserStackAccessKey === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config["capabilities"]["browserstack.key"])) {
                 // return default
@@ -264,7 +264,7 @@ class WebDriverHelper extends \Codeception\Module
     {
         $envBrowserStackAccessKey = getenv('BROWSERSTACK_LOCAL_FOLDER_URL');
         if ($envBrowserStackAccessKey === false) {
-            $webDriver = $this->moduleContainer->getModule('\SuiteCRM\Test\Driver\WebDriver');
+            $webDriver = $this->moduleContainer->getModule('\ICTCRM\Test\Driver\WebDriver');
             $config = $webDriver->_getConfig();
             if (empty($config["capabilities"]["browserstack.localfolderurl"])) {
                 // return default

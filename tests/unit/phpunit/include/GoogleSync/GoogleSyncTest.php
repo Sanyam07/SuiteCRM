@@ -1,8 +1,8 @@
 <?php
 
-use SuiteCRM\StateCheckerPHPUnitTestCaseAbstract;
-use SuiteCRM\StateSaver;
-use SuiteCRM\Utility\SuiteValidator;
+use ICTCRM\StateCheckerPHPUnitTestCaseAbstract;
+use ICTCRM\StateSaver;
+use ICTCRM\Utility\SuiteValidator;
 
 require_once __DIR__ . '/../../../../../include/GoogleSync/GoogleSync.php';
 require_once __DIR__ . '/GoogleSyncMock.php';
@@ -117,7 +117,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
      */
     public function testGetAuthJson()
     {
-        $state = new \SuiteCrm\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
     
@@ -322,11 +322,11 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
      *
      *
      */
-    public function testGetSuiteCRMCalendar()
+    public function testGetICTCRMCalendar()
     {
         $object = new GoogleSyncMock($this->getFakeSugarConfig('{"web":"test"}'));
 
-        $result = $object->callMethod('getSuiteCRMCalendar', [new Google_Service_Calendar_CalendarList()]);
+        $result = $object->callMethod('getICTCRMCalendar', [new Google_Service_Calendar_CalendarList()]);
         $this->assertEquals(null, $result);
     }
 
@@ -534,8 +534,8 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
         // Set extended properties
         $extendedProperties = new Google_Service_Calendar_EventExtendedProperties;
         $private = array();
-        $private['suitecrm_id'] = 'INVALID';
-        $private['suitecrm_type'] = 'INVALID';
+        $private['ictcrm_id'] = 'INVALID';
+        $private['ictcrm_type'] = 'INVALID';
         $private['remain_unchanged'] = 'VALID';
         $extendedProperties->setPrivate($private);
         $Google_Event->setExtendedProperties($extendedProperties);
@@ -553,7 +553,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
 
         // END: Create Google Event Object
 
-        // Create SuiteCRM Meeting Object
+        // Create ICTCRM Meeting Object
         $CRM_Meeting = BeanFactory::getBean('Meetings');
 
         $CRM_Meeting->id = 'FAKE_MEETING_ID';
@@ -567,8 +567,8 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
         $return = $object->callMethod('returnExtendedProperties', [$Google_Event, $CRM_Meeting]);
         $returnPrivate = $return->getPrivate();
 
-        $this->assertEquals('FAKE_MEETING_ID', $returnPrivate['suitecrm_id']);
-        $this->assertEquals('Meeting', $returnPrivate['suitecrm_type']);
+        $this->assertEquals('FAKE_MEETING_ID', $returnPrivate['ictcrm_id']);
+        $this->assertEquals('Meeting', $returnPrivate['ictcrm_type']);
         $this->assertEquals('VALID', $returnPrivate['remain_unchanged']);
     }
 
@@ -665,16 +665,16 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
      *
      *
      */
-    public function testUpdateSuitecrmMeetingEvent()
+    public function testUpdateICTCRMMeetingEvent()
     {
-        // This is tested by testCreateSuitecrmMeetingEvent, Since that method calls it.
+        // This is tested by testCreateICTCRMMeetingEvent, Since that method calls it.
     }
 
     /**
      *
      *
      */
-    public function testCreateSuitecrmMeetingEvent()
+    public function testCreateICTCRMMeetingEvent()
     {
         $state = new StateSaver();
         $state->pushTable('reminders');
@@ -707,8 +707,8 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
         // Set extended properties
         $extendedProperties = new Google_Service_Calendar_EventExtendedProperties;
         $private = array();
-        $private['suitecrm_id'] = 'RECORD_ID';
-        $private['suitecrm_type'] = 'Meeting';
+        $private['ictcrm_id'] = 'RECORD_ID';
+        $private['ictcrm_type'] = 'Meeting';
         $extendedProperties->setPrivate($private);
         $Google_Event->setExtendedProperties($extendedProperties);
 
@@ -730,7 +730,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
         $user->id = 'FAKEUSER';
         $object->setProperty('workingUser', $user);
 
-        $return = $object->callMethod('createSuitecrmMeetingEvent', [$Google_Event]);
+        $return = $object->callMethod('createICTCRMMeetingEvent', [$Google_Event]);
 
         $this->assertEquals('Meeting', get_class($return));
         $this->assertNotNull($return->id);
@@ -771,7 +771,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
         $startTime = $timedate->to_display_date_time('2018-01-01 12:00:00');
         $endTime = $timedate->to_display_date_time('2018-01-01 13:00:00');
 
-        // Create SuiteCRM Meeting Object
+        // Create ICTCRM Meeting Object
         $CRM_Meeting = BeanFactory::getBean('Meetings');
 
         $CRM_Meeting->id = $testid;
@@ -798,8 +798,8 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
 
         $props = $return->getExtendedProperties();
         $private = $props->getPrivate();
-        $this->assertEquals($testid, $private['suitecrm_id']);
-        $this->assertEquals('Meeting', $private['suitecrm_type']);
+        $this->assertEquals($testid, $private['ictcrm_id']);
+        $this->assertEquals('Meeting', $private['ictcrm_type']);
     }
 
     /**
@@ -848,7 +848,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
     {
         $object = new GoogleSyncMock($this->getFakeSugarConfig('{"web":"test"}'));
 
-        // Create SuiteCRM Meeting Object
+        // Create ICTCRM Meeting Object
         $CRM_Meeting = BeanFactory::getBean('Meetings');
 
         $CRM_Meeting->id = create_guid();
@@ -960,7 +960,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
     {
         $object = new GoogleSyncMock($this->getFakeSugarConfig('{"web":"test"}'));
 
-        // Create SuiteCRM Meeting Object
+        // Create ICTCRM Meeting Object
         $CRM_Meeting = BeanFactory::getBean('Meetings');
 
         $CRM_Meeting->id = create_guid();
@@ -1170,7 +1170,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
     {
         $helper = new GoogleSyncHelper;
 
-        // Create SuiteCRM Meeting Object
+        // Create ICTCRM Meeting Object
         $CRM_Meeting = BeanFactory::getBean('Meetings');
 
         $CRM_Meeting->id = create_guid();
@@ -1212,7 +1212,7 @@ class GoogleSyncTest extends StateCheckerPHPUnitTestCaseAbstract
      *
      *
      */
-    public function testCreateSuitecrmReminders()
+    public function testCreateICTCRMReminders()
     {
 //        $this->markTestIncomplete('TODO: Implement Tests');
     }

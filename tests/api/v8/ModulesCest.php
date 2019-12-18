@@ -310,7 +310,7 @@ class ModulesCest
      * URL: /api/v8/modules/{Notes}/{id}
      *
      * Also:
-     * @see \SuiteCRM\API\JsonApi\v1\Resource\SuiteBeanResource
+     * @see \ICTCRM\API\JsonApi\v1\Resource\SuiteBeanResource
      * @see SugarFieldFile::save()
      */
     public function TestScenarioCreateNoteWithAttachment(ApiTester $I)
@@ -395,7 +395,7 @@ class ModulesCest
      * URL: /api/v8/modules/{Documents}/{id}
      *
      * Also:
-     * @see \SuiteCRM\API\JsonApi\v1\Resource\SuiteBeanResource
+     * @see \ICTCRM\API\JsonApi\v1\Resource\SuiteBeanResource
      * @see SugarFieldFile::save()
      */
     public function TestScenarioCreateDocumentWithAttachment(ApiTester $I)

@@ -1,7 +1,7 @@
 <?php
 
 require_once 'modules/iCals/iCal.php';
-class iCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class iCalTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function test__construct()
     {
@@ -9,7 +9,7 @@ class iCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
         $state->pushGlobals();
         
@@ -31,7 +31,7 @@ class iCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //    {
 //	// save state
 //
-//        $state = new \SuiteCRM\StateSaver();
+//        $state = new \ICTCRM\StateSaver();
 //        $state->pushTable('email_addresses');
 //        $state->pushGlobals();
 //

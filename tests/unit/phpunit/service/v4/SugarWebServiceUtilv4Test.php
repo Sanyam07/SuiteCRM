@@ -1,6 +1,6 @@
 <?php
 
-namespace SuiteCRM;
+namespace ICTCRM;
 
 use aCase;
 use SugarWebServiceUtilv4_1;

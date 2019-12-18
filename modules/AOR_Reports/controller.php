@@ -188,7 +188,7 @@ class AOR_ReportsController extends SugarController
             sugar_die('');
         }
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushErrorLevel();
         error_reporting(0);
         require_once('modules/AOS_PDF_Templates/PDF_Lib/mpdf.php');

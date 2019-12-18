@@ -14,7 +14,7 @@ use Api\V8\Param\GetModuleParams;
 use Api\V8\Param\GetModulesParams;
 use Api\V8\Param\UpdateModuleParams;
 use Slim\Http\Request;
-use SuiteCRM\Exception\AccessDeniedException;
+use ICTCRM\Exception\AccessDeniedException;
 
 class ModuleService
 {

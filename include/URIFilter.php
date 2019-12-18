@@ -1,10 +1,10 @@
 <?php
 
-namespace SuiteCRM;
+namespace ICTCRM;
 
 /**
  * Class SugarURIFilter
- * @package SuiteCRM
+ * @package ICTCRM
  * URI filter for HTMLPurifier
  * Approves only resource URIs that are in the list of trusted domains
  * Until we have comprehensive CSRF protection, we need to sanitize URLs in emails, etc.

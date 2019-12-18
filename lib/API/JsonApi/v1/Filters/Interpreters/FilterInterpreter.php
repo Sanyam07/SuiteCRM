@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,28 +33,28 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
-namespace SuiteCRM\API\JsonApi\v1\Filters\Interpreters;
+namespace ICTCRM\API\JsonApi\v1\Filters\Interpreters;
 
 use Behat\Gherkin\Filter\FilterInterface;
-use SuiteCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface;
-use SuiteCRM\API\JsonApi\v1\Filters\Interpreters\ByIdFilters\ByIdFilter;
-use SuiteCRM\API\JsonApi\v1\Filters\Operators\FieldOperator;
-use SuiteCRM\API\JsonApi\v1\Filters\Operators\Operator;
-use SuiteCRM\API\JsonApi\v1\Filters\Validators\FieldValidator;
-use SuiteCRM\API\v8\Exception\BadRequestException;
-use SuiteCRM\Exception\Exception;
-use SuiteCRM\Utility\StringValidator;
+use ICTCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface;
+use ICTCRM\API\JsonApi\v1\Filters\Interpreters\ByIdFilters\ByIdFilter;
+use ICTCRM\API\JsonApi\v1\Filters\Operators\FieldOperator;
+use ICTCRM\API\JsonApi\v1\Filters\Operators\Operator;
+use ICTCRM\API\JsonApi\v1\Filters\Validators\FieldValidator;
+use ICTCRM\API\v8\Exception\BadRequestException;
+use ICTCRM\Exception\Exception;
+use ICTCRM\Utility\StringValidator;
 
 use Psr\Container\ContainerInterface;
 
 /**
  * Class FilterInterpreter
- * @package SuiteCRM\API\JsonApi\v1\Filters\Interpreters
+ * @package ICTCRM\API\JsonApi\v1\Filters\Interpreters
  */
 class FilterInterpreter
 {
@@ -69,17 +69,17 @@ class FilterInterpreter
     private static $fieldOperator;
 
     /**
-     * @var \SuiteCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[] $filterOperators
+     * @var \ICTCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[] $filterOperators
      */
     private static $filterOperators;
 
     /**
-     * @var \SuiteCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[]  $filterFieldOperators
+     * @var \ICTCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[]  $filterFieldOperators
      */
     private static $filterFieldOperators;
 
     /**
-     * @var \SuiteCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[]  $filterFieldOperators
+     * @var \ICTCRM\API\JsonApi\v1\Filters\Interfaces\OperatorInterface[]  $filterFieldOperators
      */
     private static $filterSpecialOperators;
 
@@ -169,7 +169,7 @@ class FilterInterpreter
         $filterName = current($filterStructure);
         $interpreters = $this->containers->get('ByPreMadeFilterInterpreters');
 
-        /** @var  \SuiteCRM\API\JsonApi\v1\Filters\Interfaces\ByPreMadeFilterInterpreter $interpreter */
+        /** @var  \ICTCRM\API\JsonApi\v1\Filters\Interfaces\ByPreMadeFilterInterpreter $interpreter */
         foreach ($interpreters as $interpreter) {
             if ($interpreter->hasByPreMadeFilter($filterName)) {
                 $filter = $interpreter->getByPreMadeFilter();

@@ -1,6 +1,6 @@
 <?php
 
-class AOS_InvoicesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_InvoicesTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -29,7 +29,7 @@ class AOS_InvoicesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testSaveAndMark_deleted()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aos_invoices');
         $state->pushTable('tracker');

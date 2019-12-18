@@ -1,7 +1,7 @@
 <?php
 
 
-class OAuthKeyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class OAuthKeyTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -30,7 +30,7 @@ class OAuthKeyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testMain()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('tracker');
         $state->pushTable('aod_index');
 

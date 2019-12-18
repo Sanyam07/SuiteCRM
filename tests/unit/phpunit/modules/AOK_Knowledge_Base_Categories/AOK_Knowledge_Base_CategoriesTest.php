@@ -1,6 +1,6 @@
 <?php
 
-class AOK_Knowledge_Base_CategoriesTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOK_Knowledge_Base_CategoriesTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOK_Knowledge_Base_Categories()
     {

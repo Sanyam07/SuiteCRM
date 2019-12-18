@@ -1,7 +1,7 @@
 <?php
 /* https://github.com/smalyshev/Zend_OAuth_Provider/blob/master/Zend/Oauth/Provider.php */
 
-namespace SuiteCRM;
+namespace ICTCRM;
 
 /**
  *

@@ -2,7 +2,7 @@
 
 require_once 'include/utils/security_utils.php';
 
-class security_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class security_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -17,7 +17,7 @@ class security_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('Test fails only in travis and php 7, Test has environment specific issue.');
 //
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //        $state->pushGlobals();
 //        $state->pushTable('aod_indexevent');
 //
@@ -75,7 +75,7 @@ class security_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testquery_user_has_roles()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
 
 
         // execute the method and test it returns 1 role
@@ -122,7 +122,7 @@ class security_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testquery_client_ip()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         //test without setting any server parameters

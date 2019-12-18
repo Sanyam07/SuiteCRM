@@ -57,7 +57,7 @@ class ModuleBuilderFieldsCest
         $moduleBuilder->createModule(
             \Page\ModuleFields::$PACKAGE_NAME,
             \Page\ModuleFields::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::basic
+            \ICTCRM\Enumerator\SugarObjectType::basic
         );
     }
 

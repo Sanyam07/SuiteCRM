@@ -1,6 +1,6 @@
 <?php
 
-class ACLRoleTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ACLRoleTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -41,7 +41,7 @@ class ACLRoleTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsetAction()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('acl_roles_actions');
         
         $aclRole = new ACLRole();

@@ -1,7 +1,7 @@
 <?php
 
 //require_once 'modules/AOR_Charts/lib/pChart/pChart.php';
-class AOR_ChartTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOR_ChartTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOR_Chart()
     {
@@ -22,7 +22,7 @@ class AOR_ChartTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave_lines()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $this->markTestSkipped('Skipping AOR Charts Tests');
         

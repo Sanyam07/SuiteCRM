@@ -1,6 +1,6 @@
 <?php
 
-class ViewQuickcreateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewQuickcreateTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -55,7 +55,7 @@ class ViewQuickcreateTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
             $_request = $_REQUEST;
         }
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

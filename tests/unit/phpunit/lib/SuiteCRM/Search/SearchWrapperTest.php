@@ -2,12 +2,12 @@
 
 /** @noinspection PhpUnhandledExceptionInspection */
 
-namespace SuiteCRM\Search;
+namespace ICTCRM\Search;
 
 use Mockery;
 use ReflectionException;
-use SuiteCRM\Search\Exceptions\SearchEngineNotFoundException;
-use SuiteCRM\StateSaver;
+use ICTCRM\Search\Exceptions\SearchEngineNotFoundException;
+use ICTCRM\StateSaver;
 
 /**
  * Class SearchWrapperTest

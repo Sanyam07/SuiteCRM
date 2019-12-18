@@ -1,7 +1,7 @@
 <?php
 
 
-class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOR_ReportTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOR_Report()
     {
@@ -30,7 +30,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('tracker');
         $state->pushTable('aod_index');
@@ -121,7 +121,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testload_report_beans()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         $aor_Report = new AOR_Report();
@@ -148,7 +148,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_report_chart()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushGlobal('dictionary');
         $state->pushGlobal('app_list_strings');
@@ -187,7 +187,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_group_report()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         // test
@@ -218,7 +218,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_report_html()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         $aor_Report = new AOR_Report();
@@ -297,7 +297,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_report_query()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         
@@ -363,7 +363,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_report_access_query()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         $aor_Report = new AOR_Report();
@@ -382,7 +382,7 @@ class AOR_ReportTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_report_query_where()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         $aor_Report = new AOR_Report();

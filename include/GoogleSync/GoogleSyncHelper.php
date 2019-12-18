@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,9 +33,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');
@@ -47,7 +47,7 @@ require_once __DIR__ . '/../../modules/Meetings/Meeting.php';
 /**
  * Implements Google Calendar Syncing
  *
- * @license https://raw.githubusercontent.com/salesagility/SuiteCRM/master/LICENSE.txt
+ * @license https://raw.githubusercontent.com/salesagility/ICTCRM/master/LICENSE.txt
  * GNU Affero General Public License version 3
  * @author Benjamin Long <ben@offsite.guru>
  */
@@ -95,10 +95,10 @@ class GoogleSyncHelper
         // Get the last modified time from google event
         $timeArray['gModified'] = strtotime($event->getUpdated());
 
-        // Get last modified of SuiteCRM event
-        $timeArray['sModified'] = strtotime($meeting->fetched_row['date_modified'] . ' UTC'); // SuiteCRM stores the timedate as UTC in the DB
+        // Get last modified of ICTCRM event
+        $timeArray['sModified'] = strtotime($meeting->fetched_row['date_modified'] . ' UTC'); // ICTCRM stores the timedate as UTC in the DB
 
-        // Get the last sync time of SuiteCRM event
+        // Get the last sync time of ICTCRM event
         $timeArray['lastSync'] = 0;
         if (isset($meeting->fetched_row['gsync_lastsync'])) {
             $timeArray['lastSync'] = $meeting->fetched_row['gsync_lastsync'];
@@ -168,7 +168,7 @@ class GoogleSyncHelper
     }
 
     /**
-     * Helper Method for GoogleSyncBase::updateSuitecrmMeetingEvent
+     * Helper Method for GoogleSyncBase::updateICTCRMMeetingEvent
      *
      * Creates reminders for event from google event reminders
      *
@@ -177,7 +177,7 @@ class GoogleSyncHelper
      *
      * @return array|bool Nested array of unsaved reminders and reminder_invitees, false on Failure
      */
-    public function createSuitecrmReminders(array $overrides, Meeting $meeting)
+    public function createICTCRMReminders(array $overrides, Meeting $meeting)
     {
         $reminders = array();
         $invitees = array();
@@ -215,7 +215,7 @@ class GoogleSyncHelper
     /**
      * Helper Method for GoogleSyncBase::setUsersGoogleCalendar
      *
-     * Wipe the Google Sync data (gsync_id and gsync_lastsync fields) from the users SuiteCRM records
+     * Wipe the Google Sync data (gsync_id and gsync_lastsync fields) from the users ICTCRM records
      *
      * @param string $assigned_user_id The user who's events need to be fixed.
      *

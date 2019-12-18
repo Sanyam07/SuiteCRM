@@ -55,7 +55,7 @@ class CompanyModuleCest
         $moduleBuilder->createModule(
             \Page\CompanyModule::$PACKAGE_NAME,
             \Page\CompanyModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::company
+            \ICTCRM\Enumerator\SugarObjectType::company
         );
     }
 

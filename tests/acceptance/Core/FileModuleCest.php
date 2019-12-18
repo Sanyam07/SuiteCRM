@@ -53,7 +53,7 @@ class FileModuleCest
         $moduleBuilder->createModule(
             \Page\FileModule::$PACKAGE_NAME,
             \Page\FileModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::file
+            \ICTCRM\Enumerator\SugarObjectType::file
         );
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class UserPreferenceTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -16,7 +16,7 @@ class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushGlobals();
 
@@ -41,7 +41,7 @@ class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //        $this->markTestIncomplete('state is incorrect');
 //        // save state
 //
-//        $state = new \SuiteCRM\StateSaver();
+//        $state = new \ICTCRM\StateSaver();
 //        $state->pushTable('aod_index');
 //        $state->pushGlobals();
 //
@@ -84,7 +84,7 @@ class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
 
         // test
@@ -125,7 +125,7 @@ class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
 
         // test
@@ -153,7 +153,7 @@ class UserPreferenceTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //        self::markTestIncomplete('environment dependency');
 //        // save state
 //
-//        $state = new \SuiteCRM\StateSaver();
+//        $state = new \ICTCRM\StateSaver();
 //        $state->pushTable('email_addresses');
 //        $state->pushTable('user_preferences');
 //        $state->pushTable('aod_index');

@@ -1,7 +1,7 @@
 <?php
 
-use SuiteCRM\StateCheckerPHPUnitTestCaseAbstract;
-use SuiteCRM\StateSaver;
+use ICTCRM\StateCheckerPHPUnitTestCaseAbstract;
+use ICTCRM\StateSaver;
 
 class SugarViewTest extends StateCheckerPHPUnitTestCaseAbstract
 {

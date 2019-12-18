@@ -1,6 +1,6 @@
 <?php
 
-class TrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class TrackerTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -33,7 +33,7 @@ class TrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_recently_viewed()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -74,7 +74,7 @@ class TrackerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('Test parameters and local variables are not set');
                 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushGlobals();
 

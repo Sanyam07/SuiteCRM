@@ -1,15 +1,15 @@
 <?php
 
-use \SuiteCRM\Robo\Plugin\Commands\CodeCoverageCommands;
+use \ICTCRM\Robo\Plugin\Commands\CodeCoverageCommands;
 
-class CodeCoverageCommandsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class CodeCoverageCommandsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     /**
      * @var \UnitTester
      */
     protected $tester;
 
-    /** @var \SuiteCRM\Robo\Plugin\Commands\CodeCoverageCommands **/
+    /** @var \ICTCRM\Robo\Plugin\Commands\CodeCoverageCommands **/
     protected static $testClass;
 
     protected function setUp()

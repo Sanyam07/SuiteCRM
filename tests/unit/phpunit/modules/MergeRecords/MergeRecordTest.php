@@ -1,6 +1,6 @@
 <?php
 
-class MergeRecordTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class MergeRecordTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -101,7 +101,7 @@ class MergeRecordTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         self::markTestIncomplete('Test failing since commit a5acea613 applied php7fix patch');
 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -128,7 +128,7 @@ class MergeRecordTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('Test failing since commit a5acea613 applied php7fix patch');
 
 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -255,7 +255,7 @@ class MergeRecordTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('Test failing since commit a5acea613 applied php7fix patch');
 
 
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         

@@ -1,7 +1,7 @@
 <?php
 namespace Helper;
 
-use SuiteCRM\Enumerator\DatabaseDriver;
+use ICTCRM\Enumerator\DatabaseDriver;
 
 /**
  * Class PhpBrowserDriverHelper

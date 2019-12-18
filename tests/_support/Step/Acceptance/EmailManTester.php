@@ -26,13 +26,13 @@ class EmailManTester extends \AcceptanceTester
     {
 //
 //        $I = new AcceptanceTester($scenario);
-//        $I->amOnPage('/SuiteCRM/index.php');
+//        $I->amOnPage('/ICTCRM/index.php');
 //        $I->click('Gmail');
 //        $I->fillField('mail_smtpuser', 'sa.tester2@gmail.com');
 //        $I->fillField('mail_smtppass', 'chilisauce');
 //        $I->checkOption('notify_allow_default_outbound');
 //        $I->click('button');
-//        $I->seeCurrentURLEquals('/SuiteCRM/index.php');
+//        $I->seeCurrentURLEquals('/ICTCRM/index.php');
 //        return ; // using different email settings in the future..
         
         $I = new NavigationBarTester($this->getScenario());

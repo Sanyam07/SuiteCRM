@@ -2,11 +2,11 @@
 
 require_once 'modules/Audit/Popup_picker.php';
 
-class PopupPickerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class PopupPickerTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testProcessPage()
     {
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         
         $state->pushGlobals();
         $state->pushTable('sugarfeed');
@@ -29,7 +29,7 @@ class PopupPickerTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         $this->assertNotEmpty($output);
         $this->assertContains('<!DOCTYPE HTML>', $output);
         $this->assertContains('<html lang=\'en_us\'>', $output);
-        $this->assertContains('<title>SuiteCRM - Open Source CRM</title>', $output);
+        $this->assertContains('<title>ICTCRM - Open Source CRM</title>', $output);
         $this->assertContains('<link rel="stylesheet" type="text/css" href="cache/themes/SuiteP/css/Dawn/style.css', $output);
         $this->assertContains('<meta http-equiv="Content-Type" content="text/html; charset="{$charset}">', $output);
         $this->assertContains('<body class="popupBody">', $output);

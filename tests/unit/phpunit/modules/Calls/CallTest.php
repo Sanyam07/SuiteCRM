@@ -1,7 +1,7 @@
 <?php
 
 
-class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class CallTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -34,7 +34,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testACLAccess()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
 
         $call = new Call();
@@ -54,7 +54,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testSaveAndMarkDeleted()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('aod_indexevent');
         $state->pushTable('calls');
@@ -144,7 +144,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testfill_in_additional_detail_fields()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -171,7 +171,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -264,7 +264,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testset_accept_status()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('calls_users');
         $state->pushTable('tracker');
         $state->pushTable('vcals');
@@ -320,7 +320,7 @@ class CallTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('environment dependency');
         
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test

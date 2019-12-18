@@ -1,9 +1,9 @@
 <?php
-use SuiteCRM\StateSaver;
+use ICTCRM\StateSaver;
 
 require_once __DIR__ . '/../../../../../modules/Users/authentication/SAML2Authenticate/SAML2Authenticate.php';
 
-class SAML2MetadataTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract {
+class SAML2MetadataTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract {
 
     public function testEntryPointNoAuth() {
         $controller = new SugarController();

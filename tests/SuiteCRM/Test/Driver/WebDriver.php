@@ -1,6 +1,6 @@
 <?php
 
-namespace SuiteCRM\Test\Driver;
+namespace ICTCRM\Test\Driver;
 
 use Helper\WebDriverHelper;
 

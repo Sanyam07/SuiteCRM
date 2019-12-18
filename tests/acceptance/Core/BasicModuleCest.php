@@ -54,7 +54,7 @@ class BasicModuleCest
         $moduleBuilder->createModule(
             \Page\BasicModule::$PACKAGE_NAME,
             \Page\BasicModule::$NAME,
-            \SuiteCRM\Enumerator\SugarObjectType::basic
+            \ICTCRM\Enumerator\SugarObjectType::basic
         );
 
         $repair->clickQuickRepairAndRebuild();

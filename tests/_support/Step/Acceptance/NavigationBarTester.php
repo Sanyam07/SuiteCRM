@@ -4,7 +4,7 @@ namespace Step\Acceptance;
 
 use \AcceptanceTester as Tester;
 use Page\Design;
-use SuiteCRM\Enumerator\DesignBreakPoint;
+use ICTCRM\Enumerator\DesignBreakPoint;
 
 class NavigationBarTester extends Tester
 {

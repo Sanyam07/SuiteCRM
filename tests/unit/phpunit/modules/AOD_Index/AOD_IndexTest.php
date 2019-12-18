@@ -1,6 +1,6 @@
 <?php
 
-class AOD_IndexTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOD_IndexTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     public function testAOD_Index()
     {
@@ -47,7 +47,7 @@ class AOD_IndexTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         self::markTestIncomplete('[Zend_Search_Lucene_Exception] File \'modules/AOD_Index/Index/Index/segments_31\' is not readable.');
         
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('tracker');
 
         // test

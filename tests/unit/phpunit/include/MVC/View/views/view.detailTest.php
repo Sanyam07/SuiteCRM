@@ -1,6 +1,6 @@
 <?php
 
-class ViewDetailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewDetailTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected $stateSaver;
     
@@ -8,7 +8,7 @@ class ViewDetailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         parent::setUp();
         
-        $this->stateSaver = new SuiteCRM\StateSaver();
+        $this->stateSaver = new ICTCRM\StateSaver();
         $this->stateSaver->pushTable('email_addresses');
 
         global $current_user;
@@ -26,7 +26,7 @@ class ViewDetailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testViewDetail()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -46,7 +46,7 @@ class ViewDetailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testpreDisplay()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         
@@ -77,7 +77,7 @@ class ViewDetailTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testdisplay()
     {
         // store state
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         $state->pushTable('email_addresses');
         

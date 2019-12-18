@@ -1,7 +1,7 @@
 <?php
 namespace Step\Acceptance;
 
-use SuiteCRM\Enumerator\SugarObjectType;
+use ICTCRM\Enumerator\SugarObjectType;
 
 class ModuleBuilder extends Administration
 {

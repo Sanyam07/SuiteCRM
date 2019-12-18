@@ -1,7 +1,7 @@
 <?php
 
 
-class ViewSugarpdfTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewSugarpdfTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {

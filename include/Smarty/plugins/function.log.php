@@ -1,6 +1,6 @@
 <?php
 
-use SuiteCRM\ErrorMessage;
+use ICTCRM\ErrorMessage;
 
 function smarty_function_log($params, &$smarty) {
     $from = $smarty->_plugins['function']['log'][1] . ':' . $smarty->_plugins['function']['log'][2];

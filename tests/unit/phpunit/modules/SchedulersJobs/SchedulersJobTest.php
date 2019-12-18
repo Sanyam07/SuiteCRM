@@ -1,6 +1,6 @@
 <?php
 
-class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class SchedulersJobTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -13,7 +13,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testSchedulersJob()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('email_addresses');
         
         //execute the contructor and check for the Object type and  attributes
@@ -39,7 +39,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testcheck_date_relationships_load()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -79,7 +79,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 //
 //        //test with valid param
 //        self::markTestIncomplete();
-//        //$result = $schedulersJob->fireUrl('https://suitecrm.com/');
+//        //$result = $schedulersJob->fireUrl('https://ictcrm.com/');
 //        //$this->assertEquals(true, $result);
     }
 
@@ -104,7 +104,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_list_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -127,7 +127,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
         
@@ -157,7 +157,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
         
@@ -185,7 +185,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testonFailureRetry()
     {
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //
 //
 //
@@ -208,7 +208,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testOnFinalFailure()
     {
-//        $state = new SuiteCRM\StateSaver();
+//        $state = new ICTCRM\StateSaver();
 //
 //
 //        //
@@ -233,7 +233,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
@@ -273,7 +273,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
         
@@ -307,7 +307,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
         
@@ -339,7 +339,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('tracker');
         
@@ -379,7 +379,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
         
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         
         // test
@@ -434,7 +434,7 @@ class SchedulersJobTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
         $schedulersJob->assigned_user_id = 1;
 
         self::markTestIncomplete();
-//        $schedulersJob->target = 'url::https://suitecrm.com/';
+//        $schedulersJob->target = 'url::https://ictcrm.com/';
 //        $result = $schedulersJob->runJob();
 //        $this->assertEquals(true, $result);
 //        $schedulersJob->mark_deleted($schedulersJob->id);

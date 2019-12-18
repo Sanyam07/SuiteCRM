@@ -1,14 +1,14 @@
 <?php
 
-namespace SuiteCRM\Search;
+namespace ICTCRM\Search;
 
 if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');
 }
 
-use SuiteCRM\Search\Exceptions\SearchInvalidRequestException;
-use SuiteCRM\Search\UI\SearchFormController;
-use SuiteCRM\Search\UI\SearchResultsController;
+use ICTCRM\Search\Exceptions\SearchInvalidRequestException;
+use ICTCRM\Search\UI\SearchFormController;
+use ICTCRM\Search\UI\SearchResultsController;
 
 /**
  * This abstract class offers the interface and utilities for other classes to be used as search engines.

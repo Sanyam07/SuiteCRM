@@ -1,6 +1,6 @@
 <?php
 
-class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class vCalTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -42,7 +42,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_list_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $vcal = new vCal();
 
@@ -61,7 +61,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testfill_in_additional_detail_fields()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -84,7 +84,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_list_view_data()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         
         
@@ -124,7 +124,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testcreate_sugar_freebusy()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -147,7 +147,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testget_vcal_freebusy()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushGlobals();
 
         // test
@@ -168,7 +168,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testcache_sugar_vcal()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('tracker');
         $state->pushTable('vcals');
@@ -195,7 +195,7 @@ class vCalTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testcache_sugar_vcal_freebusy()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('tracker');
         $state->pushTable('vcals');

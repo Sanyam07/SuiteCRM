@@ -1,6 +1,6 @@
 <?php
 
-namespace SuiteCRM\Search;
+namespace ICTCRM\Search;
 
 if (!defined('sugarEntry') || !sugarEntry) {
     die('Not A Valid Entry Point');

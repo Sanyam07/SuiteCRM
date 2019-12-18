@@ -2,7 +2,7 @@
 
 require_once 'include/utils/activity_utils.php';
 
-class activity_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class activity_utilsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -15,7 +15,7 @@ class activity_utilsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testbuild_related_list_by_user_id()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushGlobals();
         
         

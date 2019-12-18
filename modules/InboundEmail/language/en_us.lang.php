@@ -4,7 +4,7 @@
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
  *
- * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * ICTCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2019 SalesAgility Ltd.
  *
  * This program is free software; you can redistribute it and/or modify it under
@@ -33,9 +33,9 @@
  *
  * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * SugarCRM" logo and "Supercharged by ICTCRM" logo. If the display of the logos is not
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
- * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ * display the words "Powered by SugarCRM" and "Supercharged by ICTCRM".
  */
 
 if (!defined('sugarEntry') || !sugarEntry) {
@@ -67,7 +67,7 @@ $mod_strings = array(
     'LBL_EMAIL_OPTIONS' => 'Email Handling Options',
     'LBL_EMAIL_BOUNCE_OPTIONS' => 'Bounce Handling Options',
     'LBL_FILTER_DOMAIN_DESC' => 'Specify a domain to which no auto-replies will be sent.',
-    'LBL_ASSIGN_TO_GROUP_FOLDER_DESC' => 'Select to automatically create email records in SuiteCRM for all incoming emails.',
+    'LBL_ASSIGN_TO_GROUP_FOLDER_DESC' => 'Select to automatically create email records in ICTCRM for all incoming emails.',
     'LBL_FILTER_DOMAIN' => 'No Auto-Reply to this Domain',
     'LBL_FIND_SSL_WARN' => '<br>Testing SSL may take a long time. Please be patient.<br>',
     'LBL_FROM_ADDR' => '"From" Address',
@@ -100,7 +100,7 @@ $mod_strings = array(
     'LBL_MAX_AUTO_REPLIES_DESC' => 'Set the maximum number of auto-responses to send to a unique email address during a period of 24 hours.',
     'LBL_PERSONAL_MODULE_NAME' => 'Personal Mail Account',
     'LBL_CREATE_CASE' => 'Create Case from Email',
-    'LBL_CREATE_CASE_HELP' => 'Select to automatically create case records in SuiteCRM from incoming emails.',
+    'LBL_CREATE_CASE_HELP' => 'Select to automatically create case records in ICTCRM from incoming emails.',
     'LBL_MODULE_NAME' => 'Group Mail Account',
     'LBL_BOUNCE_MODULE_NAME' => 'Bounce Handling Mailbox',
     'LBL_MODULE_TITLE' => 'Inbound Email',

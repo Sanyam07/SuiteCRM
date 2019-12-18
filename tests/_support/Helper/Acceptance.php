@@ -9,7 +9,7 @@ class Acceptance extends \Codeception\Module
     public function seePageHas($text, $selector = null)
     {
         try {
-            $this->getModule('\SuiteCRM\Test\Driver\WebDriver')->see($text, $selector);
+            $this->getModule('\ICTCRM\Test\Driver\WebDriver')->see($text, $selector);
         } catch (\PHPUnit_Framework_AssertionFailedError $f) {
             return false;
         }

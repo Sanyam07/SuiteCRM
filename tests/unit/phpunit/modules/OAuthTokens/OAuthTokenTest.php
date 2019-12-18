@@ -1,6 +1,6 @@
 <?php
 
-class OAuthTokenTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class OAuthTokenTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -69,7 +69,7 @@ class OAuthTokenTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     public function testSaveAndOthers()
     {
         // save state
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('tracker');
         $state->pushTable('aod_index');
 
@@ -145,7 +145,7 @@ class OAuthTokenTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
     {
         // save state
 
-        $state = new \SuiteCRM\StateSaver();
+        $state = new \ICTCRM\StateSaver();
         $state->pushTable('tracker');
 
         // test

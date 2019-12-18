@@ -1,7 +1,7 @@
 <?php
 
 
-class ViewVcardTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class ViewVcardTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {

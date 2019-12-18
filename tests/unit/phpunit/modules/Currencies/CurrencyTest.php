@@ -1,6 +1,6 @@
 <?php
 
-class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class CurrencyTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -146,7 +146,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsave()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_index');
         $state->pushTable('currencies');
         $state->pushTable('tracker');
@@ -178,7 +178,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testcurrency_format_number()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals('$100.00', currency_format_number(100));
@@ -190,7 +190,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testformat_number()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals('100.00', format_number(100));
@@ -203,7 +203,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testformat_place_symbol()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals('R&nbsp;100', format_place_symbol(100, 'R', true));
@@ -216,7 +216,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testunformat_number()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals('100', unformat_number('$100'));
@@ -228,7 +228,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testformat_money()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals('100.00', format_money('100'));
@@ -240,7 +240,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testget_number_seperators()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $this->assertEquals(array(',', '.'), get_number_seperators());
@@ -252,7 +252,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testtoString()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         $expected = "\$m_currency_round= \n\$m_currency_decimal= \n\$m_currency_symbol= \n\$m_currency_iso= \n\$m_currency_name= \n";
@@ -276,7 +276,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testgetCurrencyNameDropDown()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         //test with view = Default / DetailView
@@ -293,7 +293,7 @@ class CurrencyTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testgetCurrencySymbolDropDown()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('currencies');
         
         //test with view = Default / DetailView

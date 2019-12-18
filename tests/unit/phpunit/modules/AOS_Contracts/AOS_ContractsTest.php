@@ -1,6 +1,6 @@
 <?php
 
-class AOS_ContractsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
+class AOS_ContractsTest extends ICTCRM\StateCheckerPHPUnitTestCaseAbstract
 {
     protected function setUp()
     {
@@ -32,7 +32,7 @@ class AOS_ContractsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testsaveAndDelete()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         
         $state->pushTable('aod_indexevent');
         $state->pushTable('aos_contracts');
@@ -64,7 +64,7 @@ class AOS_ContractsTest extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract
 
     public function testCreateReminderAndCreateLinkAndDeleteCall()
     {
-        $state = new SuiteCRM\StateSaver();
+        $state = new ICTCRM\StateSaver();
         $state->pushTable('aod_indexevent');
         $state->pushTable('calls');
         $state->pushTable('vcals');
